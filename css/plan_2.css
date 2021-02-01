@@ -1,0 +1,386 @@
+@charset "utf-8";
+@import url('common.css');
+
+/* header */
+
+header{
+    position:fixed;
+    top:5%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    z-index: 10;
+    
+}
+.head{
+    display: flex;
+    width:1400px;
+    justify-content: space-between;
+    
+}
+.head div{
+    width:140px; height:125px;
+    
+}
+.head nav{
+    width:804px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* nav */
+.head nav .navline{
+    width:804px;
+    position:absolute;
+    border-bottom: 3px solid #66ccff;
+    transform: translateY(56px);
+    z-index: -1;
+    
+}
+.head nav div{
+    border:2px solid transparent;
+    margin-right:90px;
+    
+
+}
+.head nav div span{
+    display:block;
+    padding:20px 0 20px 20px;
+    color: rgb(220,220,220);    
+}
+.head nav div a{
+    opacity:0;
+}
+.head nav div:nth-of-type(2) a{
+    transform: translateY(100%);
+}
+.head nav div:nth-of-type(3) a{
+    transform: translateY(100%);
+}
+.head nav div:hover{
+    padding-bottom:28%;
+    background: rgba(0,0,0,0.4);
+    border:2px solid #ff6633;
+}
+.head  nav div:hover span{
+    color:#33ffff;
+}
+.head nav div:hover a{
+    display:block;
+    padding-left:20px;
+    margin:20px 0;
+    opacity:1;
+    color: white;    
+    transition: .5s;
+}
+.head nav div a:hover{
+    color:#ff6633;
+}
+/* section1:reserve now */
+
+.plreserv{
+    width:100%; height:1600px;
+}
+.plreserv .s1container{
+    width:1400px; height:auto;
+    margin:0 auto;
+}
+
+/* sub navigation */
+.plreserv .s1container .headsubnav{
+    margin-bottom: 100px;
+    margin-top:260px;
+    font-size: 18px;
+    color:#333333;
+}
+.plreserv .s1container .headsubnav a::after{
+    background: url(../imgs/submenu_arrow.png) no-repeat;
+    width:20px;
+    height:12px;
+    content: '';
+    display:inline-block;
+    background-position-x: 8px;
+    overflow: visible;
+}
+.plreserv .s1container .headsubnav a:hover{
+    color:#66ccff;
+}
+.plreserv .s1container .headsubnav span{
+    color:#66ccff;
+}
+/* sub navigation */
+
+.plreserv .s1container div h2,h3{
+    display:block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+}
+.plreserv .s1container div h3{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top:24px;
+    padding-bottom: 100px;
+}
+.plreserv .s1container div figure{
+    position:relative;
+    width:100%; height:100%;
+}
+
+/* calander */
+
+.plreserv .s1container div figure .calander{
+    width:478px; height:430px;
+    position:absolute;
+    border-bottom: 3px solid #cccccc;
+    padding-left:20px;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(1){
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    font-size:24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(1) li img{
+    width:25px; height:25px;
+    margin: 6px 6px 0px 6px;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(1) li:nth-of-type(3){
+    transform: scaleX(-1);
+}
+
+
+.plreserv .s1container div figure .calander ul:nth-of-type(2){
+    width:100%;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(2) li{
+    color:#cccccc;
+    display:inline-block;
+    width:13%;
+    margin:10px 0;
+    text-align: center;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(2) li:nth-of-type(1){
+    color:#ff6666;
+}
+
+
+.plreserv .s1container div figure .calander ul:nth-of-type(3){
+    width:100%;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li{
+    display:inline-block;
+    width:13%; height:30px;
+    margin:10px 0;
+    text-align: center;
+}
+
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(7n+1) a{
+    color:#ff6666;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(1){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(2){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(3){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(4){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(5){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(37){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(38){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(39){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(40){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(41){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul:nth-of-type(3) li:nth-of-type(42){
+    color:transparent;
+}
+.plreserv .s1container div figure .calander ul li:hover a{
+    border-radius: 50%;
+    background:#66ccff;
+    width:28px; height:29px;
+    display:inline-block;
+    color:white;
+    transform: scale(1.5);
+    
+}
+
+/* contact */
+
+.plreserv .s1container div figure .contact{
+    width:478px;
+    text-align: right;
+    line-height: 2em;
+    margin-top: 60px;
+    position:absolute;
+    top:450px;
+}
+.plreserv .s1container div figure .contact h4{
+    font-size: 24px;
+    padding-bottom: 12px;
+}
+
+/* action */
+
+.plreserv .s1container div figure .action{
+    width:880px;
+    height:1200px;
+    position:absolute;
+    left:37%;
+}
+.plreserv .s1container div figure .action h4{
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+}
+.plreserv .s1container div figure .action p{
+    display:block;
+    margin:20px 0;
+}
+.plreserv .s1container div figure .action ul{
+    border-top: 3px solid #66ccff;
+    border-bottom: 3px solid #66ccff;
+}
+.plreserv .s1container div figure .action ul li{
+    padding:20px 0;
+}
+.plreserv .s1container div figure .action ul li img{
+    width:160px; height:126px;
+    display: inline-block;
+}
+.plreserv .s1container div figure .action ul li p b{
+    margin: 8px 0;
+    display:inline-block;
+    color: #66ccff;
+}
+.plreserv .s1container div figure .action ul li p{
+    display: inline-block;
+    margin:0 100px 0 50px;
+}
+.plreserv .s1container div figure .action ul li span:nth-of-type(1){
+    width:250px; 
+    transform: translateY(-26px); 
+    display: inline-block;
+    
+}
+.plreserv .s1container div figure .action ul li span:nth-of-type(1) a{
+    width:100px; height:32px;
+    display:inline-block;
+    background-color: #66ccff;
+    color:white;
+    margin:5px;
+    padding-left:8px;
+    line-height: 29px;
+}
+.plreserv .s1container div figure .action ul li span:nth-of-type(1) a img{
+    width:15px; height:7px;
+    margin-right:8px;
+    transform: translateY(12px);
+}
+.plreserv .s1container div figure .action ul li span:nth-of-type(2){
+    display:inline-block;
+    transform: translateY(-28px);
+    text-align: center;
+}
+.plreserv .s1container div figure .action ul li span:nth-of-type(2) a{
+    font-size: 24px;
+    color:black;
+    font-weight: 600;
+}
+
+/* result */
+
+.plreserv .s1container div figure .result{
+    width:880px;
+    display:flex;
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
+    left:37%;
+    top: 1000px;
+}
+.plreserv .s1container div figure .result span{
+    display: block;
+    font-size: 24px;
+}
+.plreserv .s1container div figure .result span a{
+    font-weight: 600;
+    color:black;
+    padding-left:20px;
+}
+.plreserv .s1container div figure .result .cta{
+    font-size: 1.1em;
+    font-weight: 500;
+    color:white;
+    background:#66ccff;
+    padding:12px 60px 14px 60px;
+
+    margin-top: 60px;
+}
+
+/* footer */
+
+.foot{
+    width:100%; padding:74px 0;
+}
+.foot div{
+    width:1400px; height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 3px solid #330000;
+    font-size: 12px;
+    padding-top:30px;
+    /* background-color: chartreuse; */
+}
+.foot div figure{
+    width:132px; height:32px;
+    /* background-color: cornflowerblue; */
+    display:flex;
+    justify-content: space-between;
+}
+.foot div figure a{
+    width:31px; height: 31px;
+    display:inline-block;
+    background-image: url(../imgs/share.jpg);
+    background-position-y:-2px;
+}
+.foot div figure a:nth-of-type(1) {
+    background-position-x: -5px;
+}
+.foot div figure a:nth-of-type(2){
+    background-position-x: -61px;
+}
+.foot div figure a:nth-of-type(3){
+    background-position-x: -116px;
+}
+.foot div figure a:nth-of-type(1):hover {
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(2):hover{
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(3):hover{
+    background-position-y: -35px;
+}

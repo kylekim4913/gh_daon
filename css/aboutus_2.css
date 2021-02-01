@@ -1,0 +1,362 @@
+@charset "utf-8";
+@import url('common.css');
+
+@media (max-width:480px){
+    /* main .aumap{display:none;} */
+    /* footer{display:none;} */
+}
+
+/* header */
+
+header{
+    position:fixed;
+    top:5%;    
+    width:100%;
+    display:flex;
+    justify-content: center;
+    z-index: 10;    
+}
+.head{
+    display: flex;
+    width:1400px;
+    justify-content: space-between;
+    
+}
+.head div{
+    width:140px; height:125px;
+    
+}
+
+/* nav */
+
+.head .pcnav{
+    width:804px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.head .pcnav .navline{
+    width:100%;
+    position:absolute;
+    border-bottom: 3px solid #66ccff;
+    transform: translateY(56px);
+    z-index: -1;
+    
+}
+.head .pcnav div{
+    border:2px solid transparent;
+    margin-right:90px;
+    
+
+}
+.head .pcnav div span{
+    display:block;
+    padding:20px 0 20px 20px;
+    color: rgb(220,220,220);    
+}
+.head .pcnav div a{
+    opacity:0;
+}
+.head .pcnav div:nth-of-type(2) a{
+    transform: translateY(100%);
+}
+.head .pcnav div:nth-of-type(3) a{
+    transform: translateY(100%);
+}
+.head .pcnav div:hover{
+    padding-bottom:28%;
+    background: rgba(0,0,0,0.4);
+    border:2px solid #ff6633;
+}
+.head .pcnav div:hover span{
+    color:#33ffff;
+}
+.head .pcnav div:hover a{
+    display:block;
+    padding-left:20px;
+    margin:20px 0;
+    opacity:1;
+    color: white;    
+    transition: .5s;
+}
+.head .pcnav div a:hover{
+    color:#ff6633;
+}
+
+/* 480-header */
+@media (min-width:480px){
+    .mnav{
+        display:none;
+    }
+}
+@media (max-width:480px){
+    
+    .head .pcnav{
+        display:none;
+    }
+
+    header{
+        top:3%;
+        width:100%;
+        
+    }
+    .head{
+        position:relative;
+    }
+    .head div{
+        width:20vw;
+        display:inline-block;
+        position:fixed;
+        left:5%;
+        top:3%;
+
+    }
+    .head .mnav{
+        display:inline-block;
+        width:10vw; height: 10vw;
+        padding:7vw;
+        position:fixed;
+        right:5%;
+        z-index: 999;
+    }
+    .head .mnav a span{
+        width:8vw; height: 1.2vw;
+        background-color: #cccccc;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top:50%; left:50%;
+        
+    }
+    .head .mnav a span:nth-last-of-type(2){
+        transform: translate(-50%,150%);
+    }
+    .head .mnav a span:nth-last-of-type(3){
+        transform: translate(-50%,-250%);
+    }
+}
+
+
+/* section1:location */
+
+.aumap{
+    width:100%; height:1000px;
+}
+.aumap .s1container{
+    width:1400px; height:auto;
+    margin:0 auto;
+}
+
+/* sub navigation */
+.aumap .s1container .headsubnav{
+    margin-bottom: 100px;
+    margin-top:260px;
+    font-size: 18px;
+    color:#333333;
+}
+.aumap .s1container .headsubnav a::after{
+    background: url(../imgs/submenu_arrow.png) no-repeat;
+    width:20px;
+    height:12px;
+    content: '';
+    display:inline-block;
+    background-position-x: 8px;
+    overflow: visible;
+}
+.aumap .s1container .headsubnav a:hover{
+    color:#66ccff;
+}
+.aumap .s1container .headsubnav span{
+    color:#66ccff;
+}
+/* sub navigation */
+
+.aumap .s1container div h2,h3{
+    display:block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+}
+.aumap .s1container div h3{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top:24px;
+    padding-bottom: 100px;
+}
+.aumap .s1container div figure{
+    position:relative;
+    width:100%; height:100%;
+    margin-left:200px;
+    
+}
+.aumap .s1container div figure img{
+    display:inline-block;
+    width:328px; height:500px;
+    box-shadow: 1px 1px 8px -1px #000000;
+}
+.aumap .s1container div figure figcaption{
+    display:inline-block;
+    margin-left:100px;
+    margin-top:100px;
+    font-weight: 600;
+    font-size: 24px;
+    position:relative;
+}
+.aumap .s1container div figure a img{
+    height:138px; width:138px;
+    box-shadow: none;
+}
+.aumap .s1container div figure a{
+    position:absolute;
+}
+.aumap .s1container div figure a:nth-of-type(1){
+    left:430px; top:250px;
+}
+.aumap .s1container div figure a:nth-of-type(2){
+    left:608px; top:250px;
+}
+.aumap .s1container div figure a:nth-of-type(3){
+    left:786px; top:250px;
+
+}
+
+@media (min-width:480px){
+    
+}
+
+
+@media (max-width:480px){
+
+    .headsubnav{display:none;}
+
+    .aumap{
+        height:auto;
+    }
+    .aumap .s1container{
+        width:100%;
+    }
+    .aumap .s1container div h2{
+        font-size: 1.5em;
+        margin-top: 20vh;
+        margin-bottom: 2vh;
+    }
+    .aumap .s1container div h3{
+        font-size: 1em;
+        margin:0 auto;
+        padding:0;
+        width: 80vw;
+        margin-bottom: 10vh;
+    }
+    .aumap .s1container div figure{
+        width:80vw;
+        margin: 0 auto;
+        position: relative;
+    }
+    .aumap .s1container div figure figcaption{
+        position:absolute;
+        margin:0;
+        font-size: 1em;
+        top:10%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        color:black;
+        padding:0;
+        width:80%;
+        text-align: center;
+    }
+    .aumap .s1container div figure a img{
+        width:30vw; height:30vw;
+        display:block;
+        box-shadow: 1px 1px 8px -1px #000000;
+    }
+    .aumap .s1container div figure a:nth-of-type(1){
+        top:30%; left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .aumap .s1container div figure a:nth-of-type(2){
+        top:55%; left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .aumap .s1container div figure a:nth-of-type(3){
+        top:80%; left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .aumap .s1container div figure img{
+        display:none;
+    }
+    .aumap .s1container div figure span{
+        display:block;
+        width:100%; height:90vh;
+        background: url(../imgs/sub_about-us_2_03.jpg);
+        background-size: cover;
+        background-position-x: -10vw;
+        opacity: .6;
+    }
+        
+}
+
+
+/* footer */
+
+.foot{
+    width:100%; padding:74px 0;
+}
+.foot div{
+    width:1400px; height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 3px solid #330000;
+    font-size: 12px;
+    padding-top:30px;
+    /* background-color: chartreuse; */
+}
+.foot div figure{
+    width:132px; height:32px;
+    /* background-color: cornflowerblue; */
+    display:flex;
+    justify-content: space-between;
+}
+.foot div figure a{
+    width:31px; height: 31px;
+    display:inline-block;
+    background-image: url(../imgs/share.jpg);
+    background-position-y:-2px;
+}
+.foot div figure a:nth-of-type(1) {
+    background-position-x: -5px;
+}
+.foot div figure a:nth-of-type(2){
+    background-position-x: -61px;
+}
+.foot div figure a:nth-of-type(3){
+    background-position-x: -116px;
+}
+.foot div figure a:nth-of-type(1):hover {
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(2):hover{
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(3):hover{
+    background-position-y: -35px;
+}
+
+@media (max-width:480px){
+    .foot{
+        padding-bottom:5vh;
+        margin-top:10vh;
+    }
+    .foot div{
+        width:80vw; height:auto;
+        justify-content: center;
+        padding-top:3vh;
+        flex-direction: column;
+        font-size: 0.8em;
+        white-space: pre-line;
+    }
+    .foot div p:nth-of-type(2){
+        margin:3vh 0;
+    }
+}

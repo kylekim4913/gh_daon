@@ -1,0 +1,318 @@
+@charset "utf-8";
+@import url('common.css');
+
+/* header */
+
+header{
+    position:fixed;
+    top:5%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    z-index: 10;
+    
+}
+.head{
+    display: flex;
+    width:1400px;
+    justify-content: space-between;
+    
+}
+.head div{
+    width:140px; height:125px;
+    
+}
+.head nav{
+    width:804px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* nav */
+.head nav .navline{
+    width:804px;
+    position:absolute;
+    border-bottom: 3px solid #66ccff;
+    transform: translateY(56px);
+    z-index: -1;
+    
+}
+.head nav div{
+    border:2px solid transparent;
+    margin-right:90px;
+    
+
+}
+.head nav div span{
+    display:block;
+    padding:20px 0 20px 20px;
+    color: rgb(220,220,220);    
+}
+.head nav div a{
+    opacity:0;
+}
+.head nav div:nth-of-type(2) a{
+    transform: translateY(100%);
+}
+.head nav div:nth-of-type(3) a{
+    transform: translateY(100%);
+}
+.head nav div:hover{
+    padding-bottom:28%;
+    background: rgba(0,0,0,0.4);
+    border:2px solid #ff6633;
+}
+.head  nav div:hover span{
+    color:#33ffff;
+}
+.head nav div:hover a{
+    display:block;
+    padding-left:20px;
+    margin:20px 0;
+    opacity:1;
+    color: white;    
+    transition: .5s;
+}
+.head nav div a:hover{
+    color:#ff6633;
+}
+.introimg{
+    background:url(../imgs/sub_community_2_01.jpg) no-repeat;
+    background-size: cover;
+    width:100%; height:1100px;
+    z-index: -1;
+    position:absolute;
+    top:0;
+}
+
+
+/* section1:love you */
+
+.cmreview{
+    width:100%; height:2200px;
+}
+.cmreview .s1container{
+    width:1400px; height:auto;
+    margin:0 auto;
+}
+
+/* sub navigation */
+.cmreview .s1container .headsubnav{
+    margin-bottom: 100px;
+    margin-top:260px;
+    font-size: 18px;
+}
+.cmreview .s1container .headsubnav a{
+    color:white;
+}
+.cmreview .s1container .headsubnav a::after{
+    background: url(../imgs/submenu_arrow_white.png) no-repeat;
+    width:20px;
+    height:12px;
+    content: '';
+    display:inline-block;
+    background-position-x: 8px;
+    overflow: visible;
+}
+.cmreview .s1container .headsubnav a:hover{
+    color:#33ffff;
+}
+.cmreview .s1container .headsubnav span{
+    color:#33ffff;
+}
+/* sub navigation */
+
+.cmreview .s1container div h2,h3{
+    display:block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color:white;
+}
+.cmreview .s1container div h3{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top:24px;
+    padding-bottom: 100px;
+}
+.cmreview .s1container div figure{
+    position:relative;
+    width:100%; height:100%;
+}
+.cmreview .s1container div figure .mreview{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.cmreview .s1container div figure .mreview .roundarrow{
+    width:44px; height:44px;
+    background-color: #66ccff;
+    text-align: center;    
+    border-radius: 50%;
+}
+.cmreview .s1container div figure .mreview .roundarrow img{
+    width:13px; height:22px;
+    transform: translateY(10px);
+}
+.cmreview .s1container div figure .mreview .roundarrow:nth-of-type(1){
+    transform: scaleX(-1);
+    background-color: #cccccc;
+}
+.cmreview .s1container div figure .mreview figure{
+    width:80%; height:600px;
+    background-color: white;
+    box-shadow: 1px 1px 8px -1px #000000;
+    margin:0 20px;
+}
+.cmreview .s1container div figure .mreview figure img{
+    width:60%;
+    height:100%;
+    display:inline-block;
+}
+.cmreview .s1container div figure .mreview figure figcaption{
+    display: inline-block;
+    white-space: pre-line;
+    margin-left: 40px;
+    line-height: 1.8em;
+    margin-top: 20px;
+    
+}
+.cmreview .s1container div figure .mreview figure figcaption b{
+    font-size: 20px;
+}
+.cmreview .s1container div figure .mreview figure figcaption em{
+    font-style: normal;
+    color:#cccccc;
+}
+.cmreview .s1container div figure .mreview figure figcaption a{
+    font-size: 1.1em;
+    font-weight: 500;
+    color:#66ccff;
+    border: 3px solid #66ccff;
+    padding:12px 60px 14px 60px;
+    display: inline-block;
+    transform: translateY(30px); 
+}
+.cmreview .s1container div figure .mreview figure figcaption a:hover{
+    color:#663300;
+    border:3px solid #663300;
+}
+
+.spotcardview{
+    width:1400px; height:auto;
+    margin-top:160px;
+    margin-left: 40px;
+}
+.spotcardview li{
+    display:inline-block;
+    margin-right:20px;
+    margin-bottom: 30px;
+    width:320px; height:420px;
+
+}
+.spotcardview li a figure{
+    box-shadow: 1px 1px 8px -1px #000000;
+}
+.spotcardview li a figure img{
+    width:100%; height: 280px;
+    margin-bottom: 20px;
+}
+.spotcardview li a figure b{
+    font-size: 16px;
+    padding-left:20px;
+    display:block;
+    margin-bottom:10px;
+
+}
+.spotcardview li a figure p{
+    font-size: 16px;
+    white-space: pre-line;
+    color:gray;
+    padding-left:20px;
+    line-height: 2em;
+}
+.spotcardview li a figure p em{
+    font-style: normal;
+    color:black;
+}
+.spotcardview li a figure p em:nth-of-type(2){
+    padding-right:100px;
+}
+
+/* nav */
+
+.cmreview .s1container div .cmgallery nav{
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:2%;
+}
+.cmreview .s1container div .cmgallery nav a{
+    display:inline-block;
+    margin:14px;
+    padding:3px;
+    font-size: 20px;
+    line-height: .8em;
+    font-weight: 600;
+}
+.cmreview .s1container div .cmgallery nav a:hover{
+    color:#66ccff;
+}
+.cmreview .s1container div .cmgallery nav span{
+    display: inline-block;
+}
+.cmreview .s1container div .cmgallery nav span a img{
+    width:12px; height:19px;
+}
+.cmreview .s1container div .cmgallery nav span:nth-of-type(1){
+    transform: scaleX(-1);
+}
+
+/* footer */
+
+.foot{
+    width:100%; padding:74px 0;
+}
+.foot div{
+    width:1400px; height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 3px solid #330000;
+    font-size: 12px;
+    padding-top:30px;
+    /* background-color: chartreuse; */
+}
+.foot div figure{
+    width:132px; height:32px;
+    /* background-color: cornflowerblue; */
+    display:flex;
+    justify-content: space-between;
+}
+.foot div figure a{
+    width:31px; height: 31px;
+    display:inline-block;
+    background-image: url(../imgs/share.jpg);
+    background-position-y:-2px;
+}
+.foot div figure a:nth-of-type(1) {
+    background-position-x: -5px;
+}
+.foot div figure a:nth-of-type(2){
+    background-position-x: -61px;
+}
+.foot div figure a:nth-of-type(3){
+    background-position-x: -116px;
+}
+.foot div figure a:nth-of-type(1):hover {
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(2):hover{
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(3):hover{
+    background-position-y: -35px;
+}
+

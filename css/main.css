@@ -1,0 +1,695 @@
+@charset "utf-8";
+@import url('common.css');
+
+/* 섹션간 그림자 제거/헤더에서 글자 안움직이도록  transparent 활용/ul이 아닌 a태그  활용 */
+
+/* header */
+
+@media (max-width:480px){
+    /* main .intro{display:none;}
+    main .spotview{display:none;}
+    main .spotroom{display:none;}
+    main .spotafter{display:none;}
+    footer{display:none;} */
+}
+
+
+header{
+    position:fixed;
+    top:5%;    
+    width:100%;
+    display:flex;
+    justify-content: center;
+    z-index: 10;    
+}
+.head{
+    display: flex;
+    width:1400px;
+    justify-content: space-between;
+    
+}
+.head div{
+    width:140px; height:125px;
+    
+}
+
+/* nav */
+
+.head .pcnav{
+    width:804px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.head .pcnav .navline{
+    width:100%;
+    position:absolute;
+    border-bottom: 3px solid #66ccff;
+    transform: translateY(56px);
+    z-index: -1;
+    
+}
+.head .pcnav div{
+    border:2px solid transparent;
+    margin-right:90px;
+    
+
+}
+.head .pcnav div span{
+    display:block;
+    padding:20px 0 20px 20px;
+    color: rgb(220,220,220);    
+}
+.head .pcnav div a{
+    opacity:0;
+}
+.head .pcnav div:nth-of-type(2) a{
+    transform: translateY(100%);
+}
+.head .pcnav div:nth-of-type(3) a{
+    transform: translateY(100%);
+}
+.head .pcnav div:hover{
+    padding-bottom:28%;
+    background: rgba(0,0,0,0.4);
+    border:2px solid #ff6633;
+}
+.head  .pcnav div:hover span{
+    color:#33ffff;
+}
+.head .pcnav div:hover a{
+    display:block;
+    padding-left:20px;
+    margin:20px 0;
+    opacity:1;
+    color: white;    
+    transition: .5s;
+}
+.head .pcnav div a:hover{
+    color:#ff6633;
+}
+
+/* 480-header */
+@media (min-width:480px){
+    .mnav{
+        display:none;
+    }
+}
+@media (max-width:480px){
+    
+    .head .pcnav{
+        display:none;
+    }
+
+    header{
+        top:3%;
+        width:100%;
+        
+    }
+    .head{
+        position:relative;
+    }
+    .head div{
+        width:20vw;
+        display:inline-block;
+        position:fixed;
+        left:5%;
+        top:3%;
+
+    }
+    .head .mnav{
+        display:inline-block;
+        width:10vw; height: 10vw;
+        padding:7vw;
+        position:fixed;
+        right:5%;
+        z-index: 999;
+    }
+    .head .mnav a span{
+        width:8vw; height: 1.2vw;
+        background-color: #cccccc;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top:50%; left:50%;
+        
+    }
+    .head .mnav a span:nth-last-of-type(2){
+        transform: translate(-50%,150%);
+    }
+    .head .mnav a span:nth-last-of-type(3){
+        transform: translate(-50%,-250%);
+    }
+}
+
+
+
+
+/* section 1: intro */
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%; height:880px;
+    flex-direction: column;
+    overflow: hidden;
+    position:relative;
+    background-image: url(../imgs/intro_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+.intro video{
+    transform: translateY(-8%);
+}
+.intro h1{
+    position:absolute;
+    top:40%; left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 4em;
+    letter-spacing: 5px;
+    font-weight:100;
+    color:white;
+    z-index: 1;
+    width:100%;
+    text-align: center;
+}
+.intro p{
+    position:absolute;
+    top:47%; left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.4em;
+    font-weight: 300;
+    color:white;
+    opacity:.8;
+    z-index: 1;
+    width:100%;
+    text-align: center;
+
+}
+.intro a{
+    position:absolute;
+    top:58%; left:50%;
+    transform: translate(-50%,-50%);
+    /* cta */
+    font-size: 1.1em;
+    font-weight: 500;
+    color:white;
+    background:#66ccff;
+    padding:12px 60px 14px 60px;
+    z-index: 1;
+}
+.intro a:hover{
+    background:white;
+    color:#66ccff;
+}
+
+@media (max-width:480px){
+    .intro{
+        background: none;
+        height: 100%;
+        /* overflow: visible; */
+        
+    }
+    .intro video{
+        height: 90vh;
+        transform: translateY(0);
+        
+    }
+    .intro h1{
+        font-size: 2.2em;
+        white-space: pre-line;
+        display:inline-block;
+        text-align: center;
+        top:40%; left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .intro p{
+        font-size: 0.8em;
+        white-space: pre-line;
+        text-align: center;
+        top:55%; left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .intro a{
+        font-size: .8em;
+        padding: 2vw 10vw;
+        text-align: center;
+        top:68%; left:50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+/* section 2: 풍경 */
+
+.spotview{
+    height:900px; width:100%;
+    background-image:url(../imgs/index_02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.spotview div{
+    width:1400px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.spotview div .imgslide{
+    width:260px; height:8px;
+    transform:translateY(4400%)
+}
+.spotview div .imgslide a{
+    height:100%; width:23%;
+    background-color: rgba(255,255,255,.6);
+    display:inline-block;
+    margin-right:.5%;
+}
+/* .spotview div .imgslide a:active{} */
+
+.spotview div .txtbox{
+    width:686px; height:720px;
+    background-color: rgba(255,255,255,0.5);
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:100px;
+    color:#333333;
+    text-align: left;
+    
+}
+.spotview div .txtbox p{
+    white-space: pre-line;
+    font-size:1em;
+    font-weight: 500;
+    margin:0;
+}
+.spotview div .txtbox h2{
+    font-size: 2.5em;
+    transform: translateX(-20%);
+}
+.spotview div .txtbox .cta2{
+    font-size: 1.1em;
+    font-weight: 500;
+    color:#663300;
+    border:3px solid #663300;
+    padding:12px 60px 14px 60px;
+    transform: translateX(50%);
+}
+.spotview div .txtbox .cta2:hover{
+    border:3px solid white;
+    color:white;
+}
+
+@media (max-width:480px){
+    .spotview{
+        width:100%;height:90vh;
+    }
+    .spotview div{
+        width:100vw;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+    .spotview div .txtbox{
+        width:80vw; height:70vh;
+        padding:5vw;
+        transform: translateY(-8%);
+    }
+    .spotview div .txtbox h2{
+        font-size: 1.5em;
+        width:100%;
+        text-align: center;
+        margin: 0 auto;
+        transform: translate(0,-50%);
+    }
+    .spotview div .txtbox p{
+        font-size: 0.8em;
+        text-align: left;
+        white-space: normal;
+        transform: translate(0,0);
+    }
+    .spotview div .txtbox .cta2{
+        transform: translate(0,40%) scale(.8);
+        
+    }
+    .spotview div .imgslide{
+        transform: translate(0) scale(.7);
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/* section 3:객실 */
+
+.spotroom{
+    height:900px; width:100%;
+    background-image:url(../imgs/index_03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    z-index:-1;
+}
+.spotroom div{
+    width:1400px; height:100%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position:relative;
+    
+}
+.spotroom div .txtbanner{
+    width:60%; height:380px;
+    background-color: rgba(102,51,0,0.5);
+}
+.spotroom div .txtbanner p {
+    font-size:24px;
+    color:white;
+}
+
+.spotroom div .txtbanner h2{
+    font-size: 2.5em;
+    color:white;
+    display:block;
+    margin:10% 0 5% 0;
+}
+.spotroom div .cta3{
+    font-size: 1.1em;
+    font-weight: 500;
+    color:white;
+    background: #663300;
+    padding:12px 60px 14px 60px;
+    margin-top:26%;   
+}
+.spotroom div .cta3:hover{
+    background:white;
+    color:#663300;
+}
+.spotroom div .imgslide{
+    width:260px; height:8px;
+    position:absolute;
+    bottom: 10%;
+    left:0;
+}
+.spotroom div .imgslide a{
+    height:100%; width:23%;
+    background-color: rgba(255,255,255,.6);
+    display:inline-block;
+    margin-right:.5%;
+}
+
+@media (max-width:480px){
+    .spotroom{ 
+        height: 90vh;
+        background-position-x: center;
+
+    }
+    .spotroom div{
+        position: relative;
+    }
+    .spotroom div .txtbanner{
+        padding:0;
+        width:80vw;
+        height: 33vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .spotroom div .txtbanner h2{
+        font-size: 1.5em;
+        width:80%;
+    }
+    .spotroom div .txtbanner p{
+        font-size: 1em;
+    }
+    .spotroom div .cta3{
+        transform: translate(0,40%) scale(.8);
+    }
+    .spotroom div .imgslide{
+        transform: translate(-50%,0) scale(.7);
+        position: absolute;
+        bottom: 15;
+        left:50%
+    }
+}
+
+
+/* section 4:이용후기 */
+
+.spotafter{
+    width:100%; height:900px;
+    overflow: hidden;
+}
+.spotafter div{
+    width:1400px; height:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+    margin:0 auto;
+}
+.spotafter div h2{
+    font-size: 2.5em;
+    display:block;
+    margin:10% 0 5% 0;
+}
+.spotafter div p{
+    font-size: 24px;
+}
+.spotafter div .spotcardview{
+    width:1400px; height:auto;
+    position:absolute;
+    left:0;
+    top:120%;
+    
+}
+.spotafter div .spotcardview li{
+    display:inline-block;
+    margin-right:20px;
+}
+.spotafter div .spotcardview li a figure{
+    width:326px; height:424px;
+    box-shadow: 1px 1px 8px -1px #000000;
+}
+.spotafter div .spotcardview li a figure img{
+    width:100%; height: 280px;
+    margin-bottom: 20px;
+}
+.spotafter div .spotcardview li a figure b{
+    font-size: 16px;
+    padding-left:20px;
+    display:block;
+    margin-bottom:10px;
+
+}
+.spotafter div .spotcardview li a figure p{
+    font-size: 16px;
+    white-space: pre-line;
+    color:gray;
+    padding-left:20px;
+    line-height: 2em;
+}
+.spotafter div .spotcardview li a figure p em{
+    font-style: normal;
+    color:black;
+}
+.spotafter div .spotcardview li a figure p em:nth-of-type(2){
+    padding-right:100px;
+}
+.spotafter div .spotcardview li:nth-of-type(4){
+    position:relative;
+}
+.spotafter div .spotcardview li:nth-of-type(4) figure{
+    height:424px; width:800px;
+    border:4px solid #66ccff;
+    transform: translateY(-92%);
+    box-shadow: none;
+    position: absolute;
+    padding:120px 0 0 30px;
+}
+.spotafter div .spotcardview li:nth-of-type(4) figure h3{
+    font-size: 2em;
+}
+.spotafter div .spotcardview li:nth-of-type(4) figure p{
+    padding:0;
+    margin-top:20px;
+    color:black;
+    font-size: 16px;
+}
+.spotafter div .spotcardview li:nth-of-type(4) figure a{
+    font-size: 1.1em;
+    font-weight: 500;
+    color:white;
+    background:#66ccff;
+    padding:12px 57px 11px 57px;
+    border:3px solid #66ccff;
+    margin-top:60px;
+    display:inline-block;
+}
+.spotafter div .spotcardview li:nth-of-type(4) figure a:hover{
+    border:3px solid #66ccff;
+    background:none;
+    color:#66ccff;
+}
+@media (min-width:480px){
+    .spotafter div .spotcardview li:nth-of-type(5){
+        display: none;
+    }
+}
+
+@media (max-width:480px){
+    .spotafter{
+        height: auto;
+    }
+    .spotafter div{
+        width:100%; height: auto;
+        margin-bottom:6vh;
+    }
+    .spotafter div h2{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .spotafter div p{
+        font-size: 1em;
+        margin-bottom: 5vh;
+    }
+    .spotafter div .spotcardview{
+        width:80vw; height: auto;
+        position: static;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .spotafter div .spotcardview li{
+        display:block;
+        margin:0 auto;
+        width:100%; 
+        margin:1vh 0;
+    }
+    .spotafter div .spotcardview li a figure{
+        width:80vw; height: auto;
+    }
+    .spotafter div .spotcardview li a figure b{
+        font-size: 1em;
+        padding-left:5vw;
+        margin-bottom:1vh;
+    }
+    .spotafter div .spotcardview li a figure p{
+        font-size: 0.8em;
+        white-space: pre-line;
+        color:gray;
+        padding-left:5vw;
+        line-height: 2em;
+        padding-bottom: 2vh;
+    }
+    .spotafter div .spotcardview li a figure p em:nth-of-type(2){
+        padding-right:0;
+    }
+    .spotafter div .spotcardview li:nth-of-type(1){
+        display:none;
+    }
+    .spotafter div .spotcardview li:nth-of-type(2){
+        display:none;
+    }
+    .spotafter div .spotcardview li:nth-of-type(3){
+        display:none;
+    }
+    .spotafter div .spotcardview li:nth-of-type(4){
+        display:none;
+    }
+    .spotafter div .spotcardview li:nth-of-type(5) div{
+        background-image: url(../imgs/index_06.jpg);
+        height:15vh;
+        margin: 0;
+        margin-bottom: 2vh;
+        background-position: center;
+    }
+    .spotafter div .spotcardview li:nth-of-type(6){
+        display:flex;
+        justify-content: center;
+        margin:0;
+        margin-top:-1vh;
+    }
+    .spotafter div .spotcardview li:nth-of-type(6) a{
+        font-size: 1em;
+        padding: 2vw 0;
+        text-align: center;
+        background:#66ccff;
+        display: block;
+        color:white;
+        width:45vw;
+    }
+}
+
+/* footer */
+
+.foot{
+    width:100%; padding:74px 0;
+}
+.foot div{
+    width:1400px; height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 3px solid #330000;
+    font-size: 12px;
+    padding-top:30px;
+    /* background-color: chartreuse; */
+}
+.foot div figure{
+    width:132px; height:32px;
+    /* background-color: cornflowerblue; */
+    display:flex;
+    justify-content: space-between;
+}
+.foot div figure a{
+    width:31px; height: 31px;
+    display:inline-block;
+    background-image: url(../imgs/share.jpg);
+    background-position-y:-2px;
+}
+.foot div figure a:nth-of-type(1) {
+    background-position-x: -5px;
+}
+.foot div figure a:nth-of-type(2){
+    background-position-x: -61px;
+}
+.foot div figure a:nth-of-type(3){
+    background-position-x: -116px;
+}
+.foot div figure a:nth-of-type(1):hover {
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(2):hover{
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(3):hover{
+    background-position-y: -35px;
+}
+
+@media (max-width:480px){
+    .foot{
+        padding-bottom:5vh;
+    }
+    .foot div{
+        width:80vw; height:auto;
+        justify-content: center;
+        padding-top:3vh;
+        flex-direction: column;
+        font-size: 0.8em;
+        white-space: pre-line;
+    }
+    .foot div p:nth-of-type(2){
+        margin:3vh 0;
+    }
+}

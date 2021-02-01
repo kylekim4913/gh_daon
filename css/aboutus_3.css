@@ -1,0 +1,368 @@
+@charset "utf-8";
+@import url('common.css');
+
+/* header */
+
+@media (max-width:480px){
+    /* main .autour{display:none;} */
+    /* footer{display:none;} */
+}
+
+
+header{
+    position:fixed;
+    top:5%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    z-index: 10;
+    
+}
+.head{
+    display: flex;
+    width:1400px;
+    justify-content: space-between;
+    
+}
+.head div{
+    width:140px; height:125px;
+    
+}
+.head nav{
+    width:804px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* nav */
+.head nav .navline{
+    width:804px;
+    position:absolute;
+    border-bottom: 3px solid #66ccff;
+    transform: translateY(56px);
+    z-index: -1;
+    
+}
+.head nav div{
+    border:2px solid transparent;
+    margin-right:90px;
+    
+
+}
+.head nav div span{
+    display:block;
+    padding:20px 0 20px 20px;
+    color: rgb(220,220,220);    
+}
+.head nav div a{
+    opacity:0;
+}
+.head nav div:nth-of-type(2) a{
+    transform: translateY(100%);
+}
+.head nav div:nth-of-type(3) a{
+    transform: translateY(100%);
+}
+.head nav div:hover{
+    padding-bottom:28%;
+    background: rgba(0,0,0,0.4);
+    border:2px solid #ff6633;
+}
+.head  nav div:hover span{
+    color:#33ffff;
+}
+.head nav div:hover a{
+    display:block;
+    padding-left:20px;
+    margin:20px 0;
+    opacity:1;
+    color: white;    
+    transition: .5s;
+}
+.head nav div a:hover{
+    color:#ff6633;
+}
+.introimg{
+    background:url(../imgs/sub_about-us_3_03.jpg) no-repeat;
+    background-size: cover;
+    width:100%; height:600px;
+    z-index: -1;
+    position:absolute;
+    top:0;
+}
+
+@media (min-width:480px){
+    .head .mnav{
+        display:none;
+    }
+}
+@media (max-width:480px){
+    
+    .head .pcnav{
+        display:none;
+    }
+
+    header{
+        top:3%;
+        width:100%;
+        
+    }
+    .head{
+        position:relative;
+    }
+    .head div{
+        width:20vw;
+        display:inline-block;
+        position:fixed;
+        left:5%;
+        top:3%;
+
+    }
+    .head .mnav{
+        display:inline-block;
+        width:10vw; height: 10vw;
+        padding:7vw;
+        position:fixed;
+        right:5%;
+        z-index: 999;
+    }
+    .head .mnav a span{
+        width:8vw; height: 1.2vw;
+        background-color: #cccccc;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top:50%; left:50%;
+        
+    }
+    .head .mnav a span:nth-last-of-type(2){
+        transform: translate(-50%,150%);
+    }
+    .head .mnav a span:nth-last-of-type(3){
+        transform: translate(-50%,-250%);
+    }
+    .introimg{
+        width:100%; height:40vh;
+    }    
+}
+
+/* section1:love you */
+
+.autour{
+    width:100%; height:1600px;
+}
+.autour .s1container{
+    width:1400px; height:auto;
+    margin:0 auto;
+}
+
+/* sub navigation */
+.autour .s1container .headsubnav{
+    margin-bottom: 100px;
+    margin-top:260px;
+    font-size: 18px;
+}
+.autour .s1container .headsubnav a{
+    color:white;
+}
+.autour .s1container .headsubnav a::after{
+    background: url(../imgs/submenu_arrow_white.png) no-repeat;
+    width:20px;
+    height:12px;
+    content: '';
+    display:inline-block;
+    background-position-x: 8px;
+    overflow: visible;
+}
+.autour .s1container .headsubnav a:hover{
+    color:#33ffff;
+}
+.autour .s1container .headsubnav span{
+    color:#33ffff;
+}
+/* sub navigation */
+
+.autour .s1container div h2,h3{
+    display:block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color:white;
+}
+.autour .s1container div h3{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top:24px;
+    padding-bottom: 100px;
+}
+.autour .s1container div figure{
+    position:relative;
+    width:100%; height:100%;
+}
+.autour .s1container div figure .tourgallery{
+    padding-top:100px;
+    padding-left:16%;
+    display:block;
+}
+.autour .s1container div figure .tourgallery li{
+    width:320px; height:320px;
+    display:inline-block;
+    position:relative;
+    padding:5px;
+}
+.autour .s1container div figure .tourgallery li span{
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    font-size: 24px;
+    color:white;
+    background:black;
+    width:97%; height:97%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+}
+.autour .s1container div figure .tourgallery li:hover{
+    transform:scale(1.1);
+    z-index: 1;
+    transition: .5s;
+}
+.autour .s1container div figure .tourgallery li:hover span{
+    background-color: transparent;
+    opacity:1;
+    transition: .5s;
+}
+
+.autour .s1container div figure nav{
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:2%;
+}
+.autour .s1container div figure nav a{
+    display:inline-block;
+    margin:14px;
+    padding:3px;
+    font-size: 20px;
+    line-height: .8em;
+    font-weight: 600;
+}
+.autour .s1container div figure nav a:hover{
+    color:#66ccff;
+}
+.autour .s1container div figure nav span{
+    display: inline-block;
+}
+.autour .s1container div figure nav span a img{
+    width:12px; height:19px;
+}
+.autour .s1container div figure nav span:nth-of-type(1){
+    transform: scaleX(-1);
+}
+
+@media (max-width:480px){
+    .headsubnav{
+        display:none;
+    }
+    .autour{
+        height:auto;
+    }
+    .autour .s1container{
+        width:100%;
+    }
+    .autour .s1container div h2{
+        margin-top:20vh;
+        font-size: 1.5em;
+    }
+    .autour .s1container div h3{
+        margin: 2vh auto 0 auto;
+        padding:0;
+        font-size: 1em;
+        width:80vw;
+    }
+
+    .autour .s1container div figure{
+
+    }
+    .autour .s1container div figure .tourgallery{
+        padding:0;
+        width:100%;
+        margin-top: 20vh;
+    }
+    .autour .s1container div figure .tourgallery li{
+        display:block;
+        width:60vw; height:60vw;
+        padding:0;
+        margin:0 auto 2vh auto;
+        
+    }
+    .autour .s1container div figure .tourgallery li span{
+        width:100%; height:100%;
+    }
+}
+
+/* footer */
+
+.foot{
+    width:100%; padding:74px 0;
+}
+.foot div{
+    width:1400px; height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 3px solid #330000;
+    font-size: 12px;
+    padding-top:30px;
+    /* background-color: chartreuse; */
+}
+.foot div figure{
+    width:132px; height:32px;
+    /* background-color: cornflowerblue; */
+    display:flex;
+    justify-content: space-between;
+}
+.foot div figure a{
+    width:31px; height: 31px;
+    display:inline-block;
+    background-image: url(../imgs/share.jpg);
+    background-position-y:-2px;
+}
+.foot div figure a:nth-of-type(1) {
+    background-position-x: -5px;
+}
+.foot div figure a:nth-of-type(2){
+    background-position-x: -61px;
+}
+.foot div figure a:nth-of-type(3){
+    background-position-x: -116px;
+}
+.foot div figure a:nth-of-type(1):hover {
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(2):hover{
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(3):hover{
+    background-position-y: -35px;
+}
+
+@media (max-width:480px){
+    .foot{
+        padding-bottom:5vh;
+        margin-top:10vh;
+    }
+    .foot div{
+        width:80vw; height:auto;
+        justify-content: center;
+        padding-top:3vh;
+        flex-direction: column;
+        font-size: 0.8em;
+        white-space: pre-line;
+    }
+    .foot div p:nth-of-type(2){
+        margin:3vh 0;
+    }
+}

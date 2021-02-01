@@ -1,0 +1,230 @@
+@charset "utf-8";
+@import url('common.css');
+
+/* header */
+
+header{
+    position:fixed;
+    top:5%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    z-index: 10;
+    
+}
+.head{
+    display: flex;
+    width:1400px;
+    justify-content: space-between;
+    
+}
+.head div{
+    width:140px; height:125px;
+    
+}
+.head nav{
+    width:804px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* nav */
+.head nav .navline{
+    width:804px;
+    position:absolute;
+    border-bottom: 3px solid #66ccff;
+    transform: translateY(56px);
+    z-index: -1;
+    
+}
+.head nav div{
+    border:2px solid transparent;
+    margin-right:90px;
+    
+
+}
+.head nav div span{
+    display:block;
+    padding:20px 0 20px 20px;
+    color: rgb(220,220,220);    
+}
+.head nav div a{
+    opacity:0;
+}
+.head nav div:nth-of-type(2) a{
+    transform: translateY(100%);
+}
+.head nav div:nth-of-type(3) a{
+    transform: translateY(100%);
+}
+.head nav div:hover{
+    padding-bottom:28%;
+    background: rgba(0,0,0,0.4);
+    border:2px solid #ff6633;
+}
+.head  nav div:hover span{
+    color:#33ffff;
+}
+.head nav div:hover a{
+    display:block;
+    padding-left:20px;
+    margin:20px 0;
+    opacity:1;
+    color: white;    
+    transition: .5s;
+}
+.head nav div a:hover{
+    color:#ff6633;
+}
+.introimg{
+    background:url(../imgs/sub_community_1_01.jpg) no-repeat;
+    background-size: cover;
+    width:100%; height:600px;
+    z-index: -1;
+    position:absolute;
+    top:0;
+}
+
+
+/* section1:gallery*/
+
+.cmgallery{
+    width:100%; height:1400px;
+}
+.cmgallery .s1container{
+    width:1400px; height:auto;
+    margin:0 auto;
+}
+
+/* sub navigation */
+.cmgallery .s1container .headsubnav{
+    margin-bottom: 100px;
+    margin-top:260px;
+    font-size: 18px;
+}
+.cmgallery .s1container .headsubnav a{
+    color:white;
+}
+.cmgallery .s1container .headsubnav a::after{
+    background: url(../imgs/submenu_arrow_white.png) no-repeat;
+    width:20px;
+    height:12px;
+    content: '';
+    display:inline-block;
+    background-position-x: 8px;
+    overflow: visible;
+}
+.cmgallery .s1container .headsubnav a:hover{
+    color:#33ffff;
+}
+.cmgallery .s1container .headsubnav span{
+    color:#33ffff;
+}
+/* sub navigation */
+
+.cmgallery .s1container div h2,h3{
+    display:block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color:white;
+}
+.cmgallery .s1container div h3{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top:24px;
+    padding-bottom: 100px;
+}
+.cmgallery .s1container div figure{
+    position:relative;
+    width:100%; height:100%;
+}
+
+.cmgallery .s1container div figure ul{
+    width:100%;
+    margin-left:40px;
+    margin-top: 100px;
+}
+.cmgallery .s1container div figure ul li{
+    width:326px; height:256px;
+    display: inline-block;
+    margin:8px 4px 8px 4px;
+}
+
+
+/* nav */
+
+.cmgallery .s1container div figure nav{
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:2%;
+}
+.cmgallery .s1container div figure nav a{
+    display:inline-block;
+    margin:14px;
+    padding:3px;
+    font-size: 20px;
+    line-height: .8em;
+    font-weight: 600;
+}
+.cmgallery .s1container div figure nav a:hover{
+    color:#66ccff;
+}
+.cmgallery .s1container div figure nav span{
+    display: inline-block;
+}
+.cmgallery .s1container div figure nav span a img{
+    width:12px; height:19px;
+}
+.cmgallery .s1container div figure nav span:nth-of-type(1){
+    transform: scaleX(-1);
+}
+
+/* footer */
+
+.foot{
+    width:100%; padding:74px 0;
+}
+.foot div{
+    width:1400px; height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 3px solid #330000;
+    font-size: 12px;
+    padding-top:30px;
+    /* background-color: chartreuse; */
+}
+.foot div figure{
+    width:132px; height:32px;
+    /* background-color: cornflowerblue; */
+    display:flex;
+    justify-content: space-between;
+}
+.foot div figure a{
+    width:31px; height: 31px;
+    display:inline-block;
+    background-image: url(../imgs/share.jpg);
+    background-position-y:-2px;
+}
+.foot div figure a:nth-of-type(1) {
+    background-position-x: -5px;
+}
+.foot div figure a:nth-of-type(2){
+    background-position-x: -61px;
+}
+.foot div figure a:nth-of-type(3){
+    background-position-x: -116px;
+}
+.foot div figure a:nth-of-type(1):hover {
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(2):hover{
+    background-position-y: -35px;
+}
+.foot div figure a:nth-of-type(3):hover{
+    background-position-y: -35px;
+}

@@ -1,0 +1,143 @@
+@charset "utf-8";
+@import url('common.css');
+
+/* header */
+
+header{
+    position:fixed;
+    top:5%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    z-index: 10;
+    
+}
+.head{
+    display: flex;
+    width:1400px;
+    justify-content: space-between;
+    
+}
+.head div{
+    width:140px; height:125px;
+    
+}
+.head nav{
+    width:804px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* nav */
+.head nav .navline{
+    width:804px;
+    position:absolute;
+    border-bottom: 3px solid #66ccff;
+    transform: translateY(56px);
+    z-index: -1;
+    
+}
+.head nav div{
+    border:2px solid transparent;
+    margin-right:90px;
+    
+
+}
+.head nav div span{
+    display:block;
+    padding:20px 0 20px 20px;
+    color: rgb(220,220,220);    
+}
+.head nav div a{
+    opacity:0;
+}
+.head nav div:nth-of-type(2) a{
+    transform: translateY(100%);
+}
+.head nav div:nth-of-type(3) a{
+    transform: translateY(100%);
+}
+.head nav div:hover{
+    padding-bottom:28%;
+    background: rgba(0,0,0,0.4);
+    border:2px solid #ff6633;
+}
+.head  nav div:hover span{
+    color:#33ffff;
+}
+.head nav div:hover a{
+    display:block;
+    padding-left:20px;
+    margin:20px 0;
+    opacity:1;
+    color: white;    
+    transition: .5s;
+}
+.head nav div a:hover{
+    color:#ff6633;
+}
+.introimg{
+    background:url(../imgs/sub_about-us_3_03.jpg) no-repeat;
+    background-size: cover;
+    width:100%; height:600px;
+    z-index: -1;
+    position:absolute;
+    top:0;
+}
+
+
+/* section1:love you */
+
+.autour{
+    width:100%; height:1100px;
+}
+.autour .s1container{
+    width:1400px; height:auto;
+    margin:0 auto;
+}
+
+/* sub navigation */
+.autour .s1container .headsubnav{
+    margin-bottom: 100px;
+    margin-top:260px;
+    font-size: 18px;
+}
+.autour .s1container .headsubnav a{
+    color:white;
+}
+.autour .s1container .headsubnav a::after{
+    background: url(../imgs/submenu_arrow_white.png) no-repeat;
+    width:20px;
+    height:12px;
+    content: '';
+    display:inline-block;
+    background-position-x: 8px;
+    overflow: visible;
+}
+.autour .s1container .headsubnav a:hover{
+    color:#33ffff;
+}
+.autour .s1container .headsubnav span{
+    color:#33ffff;
+}
+/* sub navigation */
+
+.autour .s1container div h2,h3{
+    display:block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color:white;
+}
+.autour .s1container div h3{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top:24px;
+    padding-bottom: 100px;
+}
+.autour .s1container div figure{
+    position:relative;
+    width:100%; height:100%;
+}
+
