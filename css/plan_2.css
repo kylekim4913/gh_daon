@@ -1,16 +1,23 @@
 @charset "utf-8";
 @import url('common.css');
 
+@media (max-width:480px){
+    /* main .plreserv .s1container div figure .calander{display:none;} */
+    /* main .plreserv .s1container div figure .contact{display:none;} */
+    /* main .plreserv .s1container div figure .action{display:none;} */
+    /* main .plreserv .s1container div figure .result{display:none;} */
+    /* footer{display:none;} */
+}
+
 /* header */
 
 header{
     position:fixed;
-    top:5%;
+    top:5%;    
     width:100%;
     display:flex;
     justify-content: center;
-    z-index: 10;
-    
+    z-index: 10;    
 }
 .head{
     display: flex;
@@ -22,51 +29,52 @@ header{
     width:140px; height:125px;
     
 }
-.head nav{
+
+/* nav */
+
+.head .pcnav{
     width:804px;
     display: flex;
     justify-content: flex-end;
     position: relative;
 }
-
-/* nav */
-.head nav .navline{
-    width:804px;
+.head .pcnav .navline{
+    width:100%;
     position:absolute;
     border-bottom: 3px solid #66ccff;
     transform: translateY(56px);
     z-index: -1;
     
 }
-.head nav div{
+.head .pcnav div{
     border:2px solid transparent;
     margin-right:90px;
     
 
 }
-.head nav div span{
+.head .pcnav div span{
     display:block;
     padding:20px 0 20px 20px;
     color: rgb(220,220,220);    
 }
-.head nav div a{
+.head .pcnav div a{
     opacity:0;
 }
-.head nav div:nth-of-type(2) a{
+.head .pcnav div:nth-of-type(2) a{
     transform: translateY(100%);
 }
-.head nav div:nth-of-type(3) a{
+.head .pcnav div:nth-of-type(3) a{
     transform: translateY(100%);
 }
-.head nav div:hover{
+.head .pcnav div:hover{
     padding-bottom:28%;
     background: rgba(0,0,0,0.4);
     border:2px solid #ff6633;
 }
-.head  nav div:hover span{
+.head .pcnav div:hover span{
     color:#33ffff;
 }
-.head nav div:hover a{
+.head .pcnav div:hover a{
     display:block;
     padding-left:20px;
     margin:20px 0;
@@ -74,8 +82,60 @@ header{
     color: white;    
     transition: .5s;
 }
-.head nav div a:hover{
+.head .pcnav div a:hover{
     color:#ff6633;
+}
+
+/* 480-header */
+@media (min-width:480px){
+    .mnav{
+        display:none;
+    }
+}
+@media (max-width:480px){
+    
+    .head .pcnav{
+        display:none;
+    }
+
+    header{
+        top:3%;
+        width:100%;
+        
+    }
+    .head{
+        position:relative;
+    }
+    .head div{
+        width:20vw;
+        display:inline-block;
+        position:fixed;
+        left:5%;
+        top:3%;
+
+    }
+    .head .mnav{
+        display:inline-block;
+        width:10vw; height: 10vw;
+        padding:7vw;
+        position:fixed;
+        right:5%;
+        z-index: 999;
+    }
+    .head .mnav a span{
+        width:8vw; height: 1.2vw;
+        background-color: #cccccc;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top:50%; left:50%;
+        
+    }
+    .head .mnav a span:nth-last-of-type(2){
+        transform: translate(-50%,150%);
+    }
+    .head .mnav a span:nth-last-of-type(3){
+        transform: translate(-50%,-250%);
+    }
 }
 /* section1:reserve now */
 
@@ -338,6 +398,137 @@ header{
     margin-top: 60px;
 }
 
+@media (max-width:480px){
+
+    .headsubnav{display:none;}
+
+    .plreserv{
+        height:auto;
+    }
+    .plreserv .s1container{
+        width:100%;
+    }
+    .plreserv .s1container div h2{
+        font-size: 1.5em;
+        margin-top: 20vh;
+        margin-bottom: 2vh;
+    }
+    .plreserv .s1container div h3{
+        font-size: 1em;
+        margin:0 auto;
+        padding:0;
+        width: 80vw;
+        margin-bottom: 10vh;
+    }
+    
+    .plreserv .s1container div figure .calander{
+        position:static;
+        padding:0;
+        width:90vw; height:auto;
+        margin:0 auto;
+    }
+    .plreserv .s1container div figure .calander ul:nth-of-type(1){
+        font-size: .8em;
+        margin-bottom: 0;
+    }
+    .plreserv .s1container div figure .calander ul:nth-of-type(1) li img{
+        width:4vw; height:4vw;
+        margin: 1vw 1vw 0 1vw;
+    }
+    .plreserv .s1container div figure .calander ul:nth-of-type(3) li{
+        margin:0;
+    }
+
+    .plreserv .s1container div figure .calander ul li:hover a{
+        width:4vw; height: 4vw;
+    }
+
+    .plreserv .s1container div figure .contact{
+        width:90vw;
+        text-align: center;
+        margin:4vh auto 0 auto;
+        position:static;
+        display:block;
+        font-size:.8em;
+    }
+    .plreserv .s1container div figure .contact h4{
+        display:none;
+    }
+
+    .plreserv .s1container div figure .action{
+        width:90vw;
+        height:auto;
+        position:static;
+        text-align: center;
+        margin:4vh auto 0 auto;
+    }
+    .plreserv .s1container div figure .action h4{
+        font-size: 1.2em;
+        color:#66ccff;
+    }
+    .plreserv .s1container div figure .action p{
+        font-size: .8em;
+    }
+    .plreserv .s1container div figure .action ul li img{
+        width:40vw; height: 30vw;
+    }
+    .plreserv .s1container div figure .action ul li p{
+        text-align: left;
+        margin:0;
+        transform: translateY(20%);
+        margin-left:2vw;        
+    }
+    .plreserv .s1container div figure .action ul li p b{
+        margin:0;
+    }
+    .plreserv .s1container div figure .action  ul li span:nth-of-type(1){
+        width:100%;
+        transform: translateY(0);
+        margin-top: 1vh;
+    }
+    .plreserv .s1container div figure .action  ul li span:nth-of-type(1) a{
+        width: 19vw; height:7vw;
+        font-size: .7em;
+        margin:1vw;
+        vertical-align: top;
+        padding:0;
+        
+        
+    }
+    .plreserv .s1container div figure .action  ul li span:nth-of-type(1) a img{
+        display: none;
+        
+    }
+    .plreserv .s1container div figure .action ul li span:nth-of-type(2){
+        width:35vw;
+        transform: translateY(0);
+        font-size: 1em;
+    }
+    .plreserv .s1container div figure .action ul li span:nth-of-type(2) a{
+        font-size: 1em;
+        border-bottom: 1px solid #cccccc;
+    }
+
+
+    .plreserv .s1container div figure .result{
+        width:100%;
+        position:static;
+        margin-top:4vh;
+    }
+    .plreserv .s1container div figure .result span{
+        font-size: 1em;
+    }
+    .plreserv .s1container div figure .result span a{
+        padding-left:4vw;
+        font-size: 1.6em;
+    }
+    .plreserv .s1container div figure .result .cta{
+        margin-top:4vh;
+        padding:2vw 8vw 2vw 8vw;
+    }
+}
+
+
 /* footer */
 
 .foot{
@@ -383,4 +574,22 @@ header{
 }
 .foot div figure a:nth-of-type(3):hover{
     background-position-y: -35px;
+}
+
+@media (max-width:480px){
+    .foot{
+        padding-bottom:5vh;
+        margin-top:10vh;
+    }
+    .foot div{
+        width:80vw; height:auto;
+        justify-content: center;
+        padding-top:3vh;
+        flex-direction: column;
+        font-size: 0.8em;
+        white-space: pre-line;
+    }
+    .foot div p:nth-of-type(2){
+        margin:3vh 0;
+    }
 }

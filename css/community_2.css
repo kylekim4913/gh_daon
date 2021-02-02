@@ -1,6 +1,13 @@
 @charset "utf-8";
 @import url('common.css');
 
+@media (max-width:480px){
+    /* main .cmreview .s1container div figure .mreview{display:none;} */
+    /* main .cmreview .cmgallery{display:none;} */
+    /* footer{display:none;} */
+}
+
+
 /* header */
 
 header{
@@ -86,8 +93,66 @@ header{
     top:0;
 }
 
+/* 480-header */
+@media (min-width:480px){
+    .head .mnav{
+        display:none;
+    }
+}
+@media (max-width:480px){
+    
+    .head .pcnav{
+        display:none;
+    }
 
-/* section1:love you */
+    header{
+        top:3%;
+        width:100%;
+        
+    }
+    .head{
+        position:relative;
+    }
+    .head div{
+        width:20vw;
+        display:inline-block;
+        position:fixed;
+        left:5%;
+        top:3%;
+
+    }
+    .head .mnav{
+        display:inline-block;
+        width:10vw; height: 10vw;
+        padding:7vw;
+        position:fixed;
+        right:5%;
+        z-index: 999;
+    }
+    .head .mnav a span{
+        width:8vw; height: 1.2vw;
+        background-color: #cccccc;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top:50%; left:50%;
+        
+    }
+    .head .mnav a span:nth-last-of-type(2){
+        transform: translate(-50%,150%);
+    }
+    .head .mnav a span:nth-last-of-type(3){
+        transform: translate(-50%,-250%);
+    }
+
+    main .cmreview .s1container .headsubnav{
+        display: none;
+    }
+        
+}
+
+
+
+/* section1:cmreview */
 
 .cmreview{
     width:100%; height:2200px;
@@ -123,6 +188,8 @@ header{
 }
 /* sub navigation */
 
+
+
 .cmreview .s1container div h2,h3{
     display:block;
     text-align: center;
@@ -136,6 +203,10 @@ header{
     padding-top:24px;
     padding-bottom: 100px;
 }
+
+/* mreview */
+
+
 .cmreview .s1container div figure{
     position:relative;
     width:100%; height:100%;
@@ -192,12 +263,83 @@ header{
     border: 3px solid #66ccff;
     padding:12px 60px 14px 60px;
     display: inline-block;
-    transform: translateY(30px); 
+    
 }
 .cmreview .s1container div figure .mreview figure figcaption a:hover{
     color:#663300;
     border:3px solid #663300;
 }
+
+@media (max-width:480px){
+
+    
+    .cmreview .s1container div figure .mreview .roundarrow{
+        display:none;
+    }
+    
+    .cmreview{
+        height:auto;
+    }
+    .cmreview .s1container{
+        width:100%;
+    }
+    .cmreview .s1container div h2{
+        margin-top:20vh;
+        font-size: 1.5em;
+    }
+    .cmreview .s1container div h3{
+        margin: 2vh auto 0 auto;
+        padding:0;
+        font-size: 1em;
+        width:80vw;
+    }
+    .introimg{
+        width:100%; height:40vh;
+    }
+    .cmreview .s1container div figure .mreview{
+        width:80vw; height:80vh;
+        margin:25vh auto 0 auto;
+    }
+    .cmreview .s1container div figure .mreview figure{
+        width:90vw;
+        padding:0;
+        height:auto;
+        margin:0;
+    }
+    .cmreview .s1container div figure .mreview figure img{
+        display:none;
+    }
+    .cmreview .s1container div figure .mreview span{
+        display:block;
+        width:100%; height:40vh;
+        background:url(../imgs/sub_community_2_04.jpg);
+        background-size: cover;
+    }
+    .cmreview .s1container div figure .mreview figure figcaption{
+        display: block;
+        margin:0;
+        line-height: 1.6em;
+        font-size: .8em;
+        padding:0 5vw;
+
+    }
+    .cmreview .s1container div figure .mreview figure figcaption b{
+        font-size: 1.5em;
+        padding:4vh  0;
+    }
+    .cmreview .s1container div figure .mreview figure figcaption em{
+        padding:0 2vw 0 0;
+        
+    }
+    .cmreview .s1container div figure .mreview figure figcaption a{
+        padding: 1vh 4vw;
+        transform: translateY(0);
+        margin:0 0 4vh 0;
+        text-align: right;       
+    }
+}
+
+/* section:2 cmgallery spotcardview */
 
 .spotcardview{
     width:1400px; height:auto;
@@ -269,6 +411,80 @@ header{
     transform: scaleX(-1);
 }
 
+@media (max-width:480px){
+    .introimg{
+        width:100%; height:60vh;}
+
+    .spotcardview{
+        width:100%;
+        margin-top:30vh;
+        margin-left:0;
+    }
+    .spotcardview li{
+        margin:0 auto;
+        display:block;
+        width:80vw; height:auto;
+        margin-bottom: 3vh;
+    }
+    .spotcardview li:nth-of-type(6){
+        display: none;
+    }
+    .spotcardview li:nth-of-type(7){
+        display: none;
+    }
+    .spotcardview li:nth-of-type(8){
+        display: none;
+    }
+    .spotcardview li a figure img{
+        display:none;
+    }
+    .spotcardview li a figure span{
+        display:block;
+        width:100%; height: 6vh;
+    }
+    .spotcardview li:nth-of-type(1) a figure span{
+        background: url(../imgs/sub_community_2_03.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .spotcardview li:nth-of-type(2) a figure span{
+        background: url(../imgs/sub_community_2_06.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .spotcardview li:nth-of-type(3) a figure span{
+        background: url(../imgs/sub_community_2_08.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .spotcardview li:nth-of-type(4) a figure span{
+        background: url(../imgs/sub_community_2_10.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+    .spotcardview li:nth-of-type(5) a figure span{
+        background: url(../imgs/sub_community_2_06.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .spotcardview li a figure figcaption b{
+        font-size: 1em;
+        margin-top: 1vh;
+    }
+    .spotcardview li a figure figcaption p{
+        font-size: .8em;
+        white-space: normal;
+    }
+    .spotcardview li a figure figcaption p em{
+        padding-left:1vw;
+    }
+    .spotcardview li a figure figcaption p em:nth-of-type(2){
+        padding-right:1vw;
+    }
+}
 /* footer */
 
 .foot{
@@ -316,3 +532,20 @@ header{
     background-position-y: -35px;
 }
 
+@media (max-width:480px){
+    .foot{
+        padding-bottom:5vh;
+        margin-top:10vh;
+    }
+    .foot div{
+        width:80vw; height:auto;
+        justify-content: center;
+        padding-top:3vh;
+        flex-direction: column;
+        font-size: 0.8em;
+        white-space: pre-line;
+    }
+    .foot div p:nth-of-type(2){
+        margin:3vh 0;
+    }
+}

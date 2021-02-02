@@ -1,16 +1,21 @@
 @charset "utf-8";
 @import url('common.css');
 
+@media (max-width:480px){
+    /* main .plprice{display:none;} */
+    /* footer{display:none;} */
+}
+
+
 /* header */
 
 header{
     position:fixed;
-    top:5%;
+    top:5%;    
     width:100%;
     display:flex;
     justify-content: center;
-    z-index: 10;
-    
+    z-index: 10;    
 }
 .head{
     display: flex;
@@ -22,51 +27,52 @@ header{
     width:140px; height:125px;
     
 }
-.head nav{
+
+/* nav */
+
+.head .pcnav{
     width:804px;
     display: flex;
     justify-content: flex-end;
     position: relative;
 }
-
-/* nav */
-.head nav .navline{
-    width:804px;
+.head .pcnav .navline{
+    width:100%;
     position:absolute;
     border-bottom: 3px solid #66ccff;
     transform: translateY(56px);
     z-index: -1;
     
 }
-.head nav div{
+.head .pcnav div{
     border:2px solid transparent;
     margin-right:90px;
     
 
 }
-.head nav div span{
+.head .pcnav div span{
     display:block;
     padding:20px 0 20px 20px;
     color: rgb(220,220,220);    
 }
-.head nav div a{
+.head .pcnav div a{
     opacity:0;
 }
-.head nav div:nth-of-type(2) a{
+.head .pcnav div:nth-of-type(2) a{
     transform: translateY(100%);
 }
-.head nav div:nth-of-type(3) a{
+.head .pcnav div:nth-of-type(3) a{
     transform: translateY(100%);
 }
-.head nav div:hover{
+.head .pcnav div:hover{
     padding-bottom:28%;
     background: rgba(0,0,0,0.4);
     border:2px solid #ff6633;
 }
-.head  nav div:hover span{
+.head .pcnav div:hover span{
     color:#33ffff;
 }
-.head nav div:hover a{
+.head .pcnav div:hover a{
     display:block;
     padding-left:20px;
     margin:20px 0;
@@ -74,9 +80,63 @@ header{
     color: white;    
     transition: .5s;
 }
-.head nav div a:hover{
+.head .pcnav div a:hover{
     color:#ff6633;
 }
+
+/* 480-header */
+@media (min-width:480px){
+    .mnav{
+        display:none;
+    }
+}
+@media (max-width:480px){
+    
+    .head .pcnav{
+        display:none;
+    }
+
+    header{
+        top:3%;
+        width:100%;
+        
+    }
+    .head{
+        position:relative;
+    }
+    .head div{
+        width:20vw;
+        display:inline-block;
+        position:fixed;
+        left:5%;
+        top:3%;
+
+    }
+    .head .mnav{
+        display:inline-block;
+        width:10vw; height: 10vw;
+        padding:7vw;
+        position:fixed;
+        right:5%;
+        z-index: 999;
+    }
+    .head .mnav a span{
+        width:8vw; height: 1.2vw;
+        background-color: #cccccc;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top:50%; left:50%;
+        
+    }
+    .head .mnav a span:nth-last-of-type(2){
+        transform: translate(-50%,150%);
+    }
+    .head .mnav a span:nth-last-of-type(3){
+        transform: translate(-50%,-250%);
+    }
+}
+
+
 /* section1:price */
 
 .plprice{
@@ -166,7 +226,7 @@ header{
     margin-top:50px;
 }
 .plprice .s1container div figure .rules h4{
-    font-style: 16px;
+    font-size: 16px;
     text-align: left;
     margin:0;
     padding-bottom: 10px;
@@ -176,6 +236,52 @@ header{
     font-size: 14px;
     padding:0;
     margin-top:-30px;
+}
+
+@media (max-width:480px){
+
+    .headsubnav{display:none;}
+
+    .plprice{
+        height:auto;
+    }
+    .plprice .s1container{
+        width:100%;
+    }
+    .plprice .s1container div h2{
+        font-size: 1.5em;
+        margin-top: 20vh;
+        margin-bottom: 2vh;
+    }
+    .plprice .s1container div h3{
+        font-size: 1em;
+        margin:0 auto;
+        padding:0;
+        width: 80vw;
+        margin-bottom: 10vh;
+    }
+
+    .plprice .s1container div figure table tr th:nth-of-type(5){
+        display:none;
+    }
+    .plprice .s1container div figure table tr th:nth-of-type(6){
+        display:none;
+    }
+    .plprice .s1container div figure table tr th:nth-of-type(7){
+        display:none;
+    }
+    .plprice .s1container div figure table tr th:nth-of-type(8){
+        display:none;
+    }
+
+    .plprice .s1container div figure table{
+        width:90vw;
+        font-size: .8em;
+    }
+    .plprice .s1container div figure .rules{
+        width:90vw;
+        font-size: .8em;
+    } 
 }
 
 /* footer */
@@ -223,4 +329,22 @@ header{
 }
 .foot div figure a:nth-of-type(3):hover{
     background-position-y: -35px;
+}
+
+@media (max-width:480px){
+    .foot{
+        padding-bottom:5vh;
+        margin-top:10vh;
+    }
+    .foot div{
+        width:80vw; height:auto;
+        justify-content: center;
+        padding-top:3vh;
+        flex-direction: column;
+        font-size: 0.8em;
+        white-space: pre-line;
+    }
+    .foot div p:nth-of-type(2){
+        margin:3vh 0;
+    }
 }
