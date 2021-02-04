@@ -122,27 +122,88 @@ header{
 
     }
     .head .mnav{
-        display:inline-block;
-        width:10vw; height: 10vw;
-        padding:7vw;
         position:fixed;
-        right:5%;
-        z-index: 999;
+        top:5%; right:5%;
     }
-    .head .mnav a span{
-        width:8vw; height: 1.2vw;
-        background-color: #cccccc;
+    .head .mnav #burger{
+        display:none;
+    }
+
+    
+    .head .mnav .blabel::before{
+        content: "";
+        
+        display:block;
+        border-bottom: 1.2vw solid #cccccc;
+        margin-bottom: 1.4vw;
+    }
+    .head .mnav .blabel::after{
+        content: "";
+        
+        display:block;
+        border-bottom: 1.2vw solid #cccccc;
+        margin-bottom: 1.4vw;
+    }
+    .head .mnav .blabel{
+        z-index: 1;
         position:absolute;
-        transform: translate(-50%,-50%);
-        top:50%; left:50%;
+        top:5%; right:5%;
+        width: 8vw; 
+        border-bottom: 1.2vw solid #cccccc;
+        display:block;
         
     }
-    .head .mnav a span:nth-last-of-type(2){
-        transform: translate(-50%,150%);
+    
+    .head .mnav #burger:checked~ .blabel{
+        border-bottom: 1.2vw solid white;
     }
-    .head .mnav a span:nth-last-of-type(3){
-        transform: translate(-50%,-250%);
+    .head .mnav #burger:checked~ .blabel::before{
+        border-bottom: 1.2vw solid white;
+        
     }
+    .head .mnav #burger:checked~ .blabel::after{
+        border-bottom: 1.2vw solid white;
+    }
+    .head .mnav .bmenu{
+        
+        transition: .5s;
+        padding:15vh 0 0 6vw;
+        position: fixed;
+        top:0; left:120%;
+        
+        width:50vw; height:100%;
+        overflow: hidden;
+        
+    }
+    .head .mnav .bmenu a{
+        display:block;
+        padding-bottom:2vh;
+        color:#66ccff;
+    }
+    .head .mnav .bmenu h2{
+        font-size: 1.2em;
+        padding-bottom:2vh;
+        color:#cccccc;
+    }
+
+    .head .mnav #burger:checked~ .bmenu{
+        position: fixed;
+        padding:15vh 0 0 6vw;
+        top:0; left:50%;
+        width:50vw; 
+        height:100%;
+        background:rgba(0,0,0,.8);
+        
+        
+    }
+    .head .mnav #burger:checked~ .bmenu a{
+        font-size: 1em;
+        color:#66ccff;
+        display:block;
+        padding-bottom:2vh;
+    }
+
+
     .introimg{
         width:100%; height:40vh;
     }    
