@@ -28,7 +28,7 @@ header{
     width:140px; height:125px;
     
 }
-.head nav{
+.head .pcnav{
     width:804px;
     display: flex;
     justify-content: flex-end;
@@ -36,7 +36,7 @@ header{
 }
 
 /* nav */
-.head nav .navline{
+.head .pcnav .navline{
     width:804px;
     position:absolute;
     border-bottom: 3px solid #66ccff;
@@ -44,27 +44,27 @@ header{
     z-index: -1;
     
 }
-.head nav div{
+.head .pcnav div{
     border:2px solid transparent;
     margin-right:90px;
     
 
 }
-.head nav div span{
+.head .pcnav div span{
     display:block;
     padding:20px 0 20px 20px;
     color: rgb(220,220,220);    
 }
-.head nav div a{
+.head .pcnav div a{
     opacity:0;
 }
-.head nav div:nth-of-type(2) a{
+.head .pcnav div:nth-of-type(2) a{
     transform: translateY(100%);
 }
-.head nav div:nth-of-type(3) a{
+.head .pcnav div:nth-of-type(3) a{
     transform: translateY(100%);
 }
-.head nav div:hover{
+.head .pcnav div:hover{
     padding-bottom:28%;
     background: rgba(0,0,0,0.4);
     border:2px solid #ff6633;
@@ -72,7 +72,7 @@ header{
 .head  nav div:hover span{
     color:#33ffff;
 }
-.head nav div:hover a{
+.head .pcnav div:hover a{
     display:block;
     padding-left:20px;
     margin:20px 0;
@@ -80,7 +80,7 @@ header{
     color: white;    
     transition: .5s;
 }
-.head nav div a:hover{
+.head .pcnav div a:hover{
     color:#ff6633;
 }
 .introimg{
@@ -121,7 +121,7 @@ header{
     }
     .head .mnav{
         position:fixed;
-        top:5%; right:0;
+        top:5%; right:5%;
     }
     .head .mnav #burger{
         display:none;
