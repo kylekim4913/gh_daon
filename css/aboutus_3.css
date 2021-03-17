@@ -370,6 +370,102 @@ header{
     }
 }
 
+/* nami popup */
+
+.nami{
+    z-index: 11;
+    background:rgba(0,0,0,.6);
+    width:100%; height:100vh;
+    position:fixed;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    top:0; left:0;
+}
+.nami.active{
+    display:flex;
+    animation: pgpop linear .2s;
+}
+@keyframes pgpop{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.close{
+    position:absolute;
+    right:20%;
+    top:12%;
+    width:30px; height:30px;
+}
+.close span{
+    width:30px;
+    height:5px;
+    display:inline-block;
+    background-color: white;
+    position:absolute;
+    top:40%;
+}
+.close span:nth-of-type(1){
+    transform: rotate(45deg);
+}
+.close span:nth-of-type(2){
+    transform: rotate(-45deg);
+}
+.n_cont{
+    width:60vw; height:60vh;
+    display: flex;
+}
+.n_left{
+    width:50%;
+    background:url(../imgs/temp_daon_14.JPG) no-repeat;
+    background-size: cover;
+}
+.n_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:50%;
+    padding:20px 40px;
+    background-color: white;
+}
+.nami .n_cont .n_right h2{
+    animation: none;
+    padding-bottom: 20px;
+    color:black;
+}
+
+/* kal popup */
+
+.kal{
+    z-index: 11;
+    background:rgba(0,0,0,.6);
+    width:100%; height:100vh;
+    position:fixed;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    top:0; left:0;
+}
+.kal.active{
+    display:flex;
+    animation: pgpop linear .2s;
+}
+@keyframes pgpop{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.n_left{
+    width:50%;
+    background:url(../imgs/temp_daon_15.JPG) no-repeat;
+    background-size: cover;
+}
+
+.kal .n_cont .n_right h2{
+    animation: none;
+    padding-bottom: 20px;
+    color:black;
+}
+
 /* footer */
 
 .foot{

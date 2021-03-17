@@ -282,6 +282,52 @@ header{
     margin:8px 4px 8px 4px;
 }
 
+.pg_popup{
+    z-index: 11;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100vh;
+    background-color: rgba(0,0,0,0.6);
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+.pg_popup.active{
+    display:flex;
+    animation: pgpop linear .2s;
+}
+@keyframes pgpop{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.pg_cont{
+    width:80vw; height:60vh;
+}
+.pg_cont img{
+    width:100%; height:100%;
+}
+.close{
+    position:absolute;
+    right:10%;
+    top:12%;
+    width:30px; height:30px;
+}
+.close span{
+    width:30px;
+    height:5px;
+    display:inline-block;
+    background-color: white;
+    position:absolute;
+    top:40%;
+}
+.close span:nth-of-type(1){
+    transform: rotate(45deg);
+}
+.close span:nth-of-type(2){
+    transform: rotate(-45deg);
+}
+
+
 
 /* nav */
 

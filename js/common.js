@@ -17,8 +17,8 @@ $(function(){
                         imgSrc = dataC1.photoGallery[k].imgSrc;
 
                         tagList += "<li data type = "+ type + ">";
-                        tagList += "<a href='#'>";
-                        tagList += "<img src="+imgSrc+">";
+                        tagList += "<a>";
+                        tagList += "<img class='c1_img' src="+imgSrc+">";
                         tagList += "</a></li>";
                     }
                 })
@@ -42,7 +42,7 @@ $(function(){
                         date = dataC1.daonAfter[k].date;
                         viewCount = dataC1.daonAfter[k].viewCount;
 
-                        tagList += "<li data type="+type+"><a href='#'><figure>",
+                        tagList += "<li id='scv_pop' data type="+type+"><a><figure>",
                         tagList += "<img src="+imgSrc+">",
                         tagList += "<span></span><figcaption>",
                         tagList += "<b>"+title+"</b>",
@@ -64,18 +64,18 @@ $(function(){
     $(window).on('scroll',function(e){
 
         var i = $(window).scrollTop();
-        console.log(i)
-        if(i>700){
+        
+        if(i>600){
             $('.txtbox').addClass('active');
         }
-        if(i>1500){
+        if(i>1400){
             $('.txtbanner').addClass('active');
         }
-        if(i>2400){
+        if(i>2300){
             $('.spotafter div h2').addClass('active');
             $('.spotafter div p').addClass('active');
         }
-        if(i>2500){
+        if(i>2400){
             $('.spotcardview').addClass('active');
         }
     })//end of scroll
@@ -135,15 +135,69 @@ $(function(){
     $(window).on('scroll',function(e){
 
         var i = $(window).scrollTop();
-        console.log(i)
-        if(i>1000){
+        
+        if(i>550){
             $('#au2room_img').addClass('active');
         }
-        if(i>1000){
+        if(i>550){
             $('#au2room_box').addClass('active');
         }
-        if(i>1000){
+        if(i>550){
             $('#au2room_thumb').addClass('active');
         }
     })//end of scroll
+
+    $('span#nami').on('click',function(){
+
+        $('.nami').addClass('active');
+    })
+    $('.close').on('click',function(){
+        $('.nami').removeClass('active');
+    })
+
+    $('li#kal').on('click',function(){
+
+        $('.kal').addClass('active');
+    })
+    $('.close').on('click',function(){
+        $('.kal').removeClass('active');
+    })
+    //end of about3 popup
+
+    
+    function c1(){
+        $('.c1_img').on('click',function(){
+            var c1 = $(this).attr('src');
+            $('.pg_popup').addClass('active');
+            $('.pg_cont img').attr('src',c1);
+        })
+    }
+    setTimeout(c1,100)
+
+    $('.close').on('click',function(){
+        $('.pg_popup').removeClass('active');
+    })
+    //end of photogallery popup
+
+    $('#mr_cta').on('click',function(){
+        $('.df_popup').addClass('active')
+    })
+    function c2(){
+        $('li#scv_pop').on('click',function(){
+            $('.df_popup').addClass('active')
+        })
+    }
+    setTimeout(c2,100)
+
+    function c3(){
+        $('li#ir_popup').on('click',function(){
+            $('.df_popup').addClass('active')
+        })
+    }
+    setTimeout(c3,100)
+
+    $('.close').on('click',function(){
+        $('.df_popup').removeClass('active');
+    })
+
 });
