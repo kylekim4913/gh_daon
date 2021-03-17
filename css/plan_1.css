@@ -236,6 +236,11 @@ header{
     text-align: center;
     font-size: 48px;
     font-weight: 600;
+    animation: auhead linear 1s;
+}
+@keyframes auhead{
+    0%{opacity:0;}
+    100%{opacity:1;}
 }
 .plprice .s1container div h3{
     font-size: 24px;
@@ -295,6 +300,14 @@ header{
     font-size: 14px;
     padding:0;
     margin-top:-30px;
+}
+
+.plprice .s1container div figure table tr{
+    animation: tabletr ease-in 1s;
+}
+@keyframes tabletr{
+    0%{opacity:0;transform: translateY(10%);}
+    100%{opacity:1; transform: translateY(0);}
 }
 
 @media (max-width:480px){

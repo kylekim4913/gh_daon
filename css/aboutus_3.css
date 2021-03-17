@@ -251,6 +251,11 @@ header{
     font-size: 48px;
     font-weight: 600;
     color:white;
+    animation: auhead linear 1s;
+}
+@keyframes auhead{
+    0%{opacity:0;}
+    100%{opacity:1;}
 }
 .autour .s1container div h3{
     font-size: 24px;

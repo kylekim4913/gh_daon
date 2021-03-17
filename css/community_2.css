@@ -258,7 +258,13 @@ header{
     font-size: 48px;
     font-weight: 600;
     color:white;
+    animation: auhead linear 1s;
 }
+@keyframes auhead{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
 .cmreview .s1container div h3{
     font-size: 24px;
     font-weight: 400;
@@ -277,6 +283,11 @@ header{
     display:flex;
     justify-content: center;
     align-items: center;
+    animation: mrev .8s ease-out;
+}
+@keyframes mrev{
+    0%{transform: translateY(40%); opacity: 0;}
+    100%{transform: translateY(0%);opacity: 1;}
 }
 .cmreview .s1container div figure .mreview .roundarrow{
     width:44px; height:44px;

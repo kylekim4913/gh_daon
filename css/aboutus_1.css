@@ -235,6 +235,11 @@ header{
     text-align: center;
     font-size: 48px;
     font-weight: 600;
+    animation: auhead linear 1s;
+}
+@keyframes auhead{
+    0%{opacity:0;}
+    100%{opacity:1;}
 }
 .auroom1 .s1container div h3{
     font-size: 24px;
@@ -288,6 +293,11 @@ header{
     border:3px solid #66ccff;
     top:80px; left:8%;
     z-index: 2;    
+    animation: auroom2 ease-out .5s ;
+}
+@keyframes auroom2{
+    0%{transform:translateX(-50%)}
+    100%{transform:translateX(0%)}
 }
 .auroom1 .s1container div figure div p:nth-of-type(1){
     position:absolute;
@@ -305,11 +315,19 @@ header{
     font-size:24px;
     line-height: 2em;
 }
+
+
 .auroom1 .s1container div figure div:nth-of-type(2){
     width:704px; height:540px;
     position:absolute;
     left:24%; 
     box-shadow: 1px 1px 8px -1px #000000;
+    transition: .5s;
+    animation: auroom1 ease-out .5s ;
+}
+@keyframes auroom1{
+    0%{transform:translateY(50%)}
+    100%{transform:translateY(0%)}
 }
 .auroom1 .s1container div figure div:nth-of-type(2) img{
     height:100%;
@@ -343,6 +361,11 @@ header{
     position:absolute;
     left:75%;
     opacity:.5;
+    animation:auroom3 ease-in .5s;
+}
+@keyframes auroom3{
+    0%{transform:translateX(50%)}
+    100%{transform:translateX(0%)}
 }
 .auroom1 .s1container div figure li{
     margin-bottom: 6.4%;
@@ -494,6 +517,40 @@ header{
 .auroom2 .s2container div figure li:hover img{
     opacity:.5;
     transition:.5s;
+}
+#au2room_img{
+    opacity:0;
+}
+#au2room_img.active{
+    opacity:1;
+    animation:auroom5 ease-out .5s;
+}
+@keyframes auroom5{
+    0%{transform:translateY(50%);opacity:0;}
+    100%{transform:translateY(0%);opacity:1;}
+}
+#au2room_box{
+    opacity:0;
+}
+#au2room_box.active{
+    opacity:1;
+    animation: auroom6 ease-out .5s;
+}
+@keyframes auroom6{
+    0%{transform:translateX(50%);opacity:0;}
+    100%{transform:translateX(0%);opacity:1;}
+}
+#au2room_thumb{
+    opacity:0;
+}
+#au2room_thumb.active{
+    opacity:1;
+    animation: auroom7 ease-out .5s;
+}
+@keyframes auroom7{
+    0%{transform:translateX(-50%);opacity:0;}
+    100%{transform:translateX(0%);opacity:1;}
+
 }
 
 @media (min-width:480px){

@@ -234,6 +234,11 @@ header{
     text-align: center;
     font-size: 48px;
     font-weight: 600;
+    animation: auhead linear 1s;
+}
+@keyframes auhead{
+    0%{opacity:0;}
+    100%{opacity:1;}
 }
 .aumap .s1container div h3{
     font-size: 24px;
@@ -259,6 +264,12 @@ header{
     font-weight: 600;
     font-size: 24px;
     position:relative;
+    animation: address ease-out 1.5s;
+}
+@keyframes address{
+    0%{opacity:0}
+    30%{opacity:0}
+    100%{opacity:1}
 }
 .aumap .s1container div figure a img{
     height:138px; width:138px;
@@ -269,13 +280,28 @@ header{
 }
 .aumap .s1container div figure a:nth-of-type(1){
     left:430px; top:250px;
+    animation: mapicon ease-out 1.0s;
 }
 .aumap .s1container div figure a:nth-of-type(2){
     left:608px; top:250px;
+    animation: mapicon ease-out 1.4s;
 }
 .aumap .s1container div figure a:nth-of-type(3){
     left:786px; top:250px;
+    animation: mapicon ease-out 1.8s;
 
+}
+@keyframes mapicon{
+    0%{opacity:0; top:300px;}
+    30%{opacity:0; top:300px;}
+    100%{opacity:1; top:250px;}
+}
+#au2map_img{
+    animation:au2main_img ease-out 1s;
+}
+@keyframes au2main_img{
+    0%{transform:translateX(-50%)}
+    100%{transform:translateX(0%)}
 }
 
 @media (min-width:480px){

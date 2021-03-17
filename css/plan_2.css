@@ -235,6 +235,11 @@ header{
     text-align: center;
     font-size: 48px;
     font-weight: 600;
+    animation: auhead linear 1s;
+}
+@keyframes auhead{
+    0%{opacity:0;}
+    100%{opacity:1;}
 }
 .plreserv .s1container div h3{
     font-size: 24px;
@@ -254,6 +259,11 @@ header{
     position:absolute;
     border-bottom: 3px solid #cccccc;
     padding-left:20px;
+    animation: calen 1s ease-out;
+}
+@keyframes calen{
+    0%{transform: translateX(-20%);}
+    100%{transform: translateX(0%);}
 }
 .plreserv .s1container div figure .calander ul:nth-of-type(1){
     display:flex;
@@ -352,7 +362,13 @@ header{
     margin-top: 60px;
     position:absolute;
     top:450px;
+    animation: calen 1s ease-out;
 }
+@keyframes calen{
+    0%{transform: translateX(-20%);}
+    100%{transform: translateX(0%);}
+}
+
 .plreserv .s1container div figure .contact h4{
     font-size: 24px;
     padding-bottom: 12px;
@@ -365,7 +381,13 @@ header{
     height:1200px;
     position:absolute;
     left:37%;
+    animation: act 1s ease-out;
 }
+@keyframes act{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
 .plreserv .s1container div figure .action h4{
     display: block;
     font-size: 24px;
