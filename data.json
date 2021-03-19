@@ -2,51 +2,51 @@
     "photoGallery":[
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_4.jpg"            
+            "imgSrc":"./imgs/room_19x9_1.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_5.jpg"            
+            "imgSrc":"./imgs/room_19x9_2.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_6.jpg"            
+            "imgSrc":"./imgs/room_19x9_3.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_7.jpg"            
+            "imgSrc":"./imgs/room_19x9_4.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_8.jpg"            
+            "imgSrc":"./imgs/room_19x9_5.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_9.jpg"            
+            "imgSrc":"./imgs/view_19x9_1.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_10.jpg"            
+            "imgSrc":"./imgs/view_19x9_2.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_11.jpg"            
+            "imgSrc":"./imgs/view_19x9_3.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_12.jpg"            
+            "imgSrc":"./imgs/view_19x9_4.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_13.jpg"            
+            "imgSrc":"./imgs/view_19x9_5.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_14.jpg"            
+            "imgSrc":"./imgs/room_19x9_3.jpg"            
         },
         {
             "type":"pGallery",
-            "imgSrc":"./imgs/sub_community_1_15.jpg"            
+            "imgSrc":"./imgs/room_19x9_2.jpg"            
         }
     ],
 

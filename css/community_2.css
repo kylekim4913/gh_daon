@@ -426,6 +426,15 @@ header{
     width:320px; height:420px;
 
 }
+.spotcardview li:hover{
+    animation: pghover ease-in .5s;
+    transform: translateY(-5%);
+}
+@keyframes pghover{
+    0%{transform:translateY(0%)}
+    100%{transform:translateY(-5%)}
+}
+
 .spotcardview li a figure{
     box-shadow: 1px 1px 8px -1px #000000;
 }

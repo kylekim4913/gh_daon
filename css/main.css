@@ -361,6 +361,28 @@ header{
     display: flex;
     align-items: center;
 }
+
+.ir_cont > .close{
+    position:fixed;
+    right:10%;
+    top:12%;
+    width:30px; height:30px;
+}
+.ir_cont > .close span{
+    width:30px;
+    height:5px;
+    display:inline-block;
+    background-color: white;
+    position:absolute;
+    top:40%;
+}
+.ir_cont > .close span:nth-of-type(1){
+    transform: rotate(45deg);
+}
+.ir_cont > .close span:nth-of-type(2){
+    transform: rotate(-45deg);
+}
+
 .irc_left{
     width:40vw; height:100%;
     background:url(../imgs/sub_about-us_1_03.jpg) no-repeat;
@@ -446,16 +468,13 @@ header{
 
 .spotview{
     height:900px; width:100%;
-    background-image:url(../imgs/index_02.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     display:flex;
     justify-content: center;
     align-items: center;
     position:relative;
 }
 .sv_bg{
-    width:100%; height:100%;
+    height:100%; width:auto;
     position:absolute;
 }
 .spotview div{
@@ -480,7 +499,7 @@ header{
 
 .spotview div .txtbox{
     width:686px; height:720px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.8);
     display:flex;
     flex-direction: column;
     margin:0;
@@ -566,11 +585,11 @@ header{
     background-repeat: no-repeat;
     display:flex;
     justify-content: center;
-    z-index:-1;
+    z-index:0;
     position:relative;
 }
 .sr_bg{
-    width:100%; height:100%;
+    width:auto; height:100%;
     position:absolute;
 }
 .spotroom div{
@@ -1019,3 +1038,106 @@ header{
         margin:3vh 0;
     }
 }
+
+/* slick slider */
+.sv_popup{
+    z-index: 11;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100vh;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+.sv_popup.active{
+    display:flex;
+    animation: pgpop linear .2s;
+}
+@keyframes pgpop{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.svp_cont{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.svp_cont > .close{
+    position:fixed;
+    right:10%;
+    top:6%;
+    width:30px; height:30px;
+}
+.svp_cont > .close span{
+    width:30px;
+    height:5px;
+    display:inline-block;
+    background-color: white;
+    position:absolute;
+    top:40%;
+}
+.svp_cont > .close span:nth-of-type(1){
+    transform: rotate(45deg);
+}
+.svp_cont > .close span:nth-of-type(2){
+    transform: rotate(-45deg);
+}
+
+.wrap{
+    
+    position: relative;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+
+.wrap div{
+    transition: .5s;
+}
+.wrap div:nth-of-type(1){
+    width:70vw; height:70vh;
+    background: url(../imgs/tour_19x9_1.jpg);
+    background-size: cover;
+}
+.wrap div:nth-of-type(2){
+    width:70vw; height:70vh;
+    background: url(../imgs/tour_19x9_2.jpg);
+    background-size: cover;
+}
+.wrap div:nth-of-type(3){
+    width:70vw; height:70vh;
+    background: url(../imgs/tour_19x9_3.jpg);
+    background-size: cover;
+}
+.wrap div:nth-of-type(4){
+    width:70vw; height:70vh;
+    background: url(../imgs/tour_19x9_4.jpg);
+    background-size: cover;
+}
+.wrap div:nth-of-type(5){
+    width:70vw; height:70vh;
+    background: url(../imgs/tour_19x9_5.jpg);
+    background-size: cover;
+}
+.on_screen{
+    display:block;
+    position: absolute;
+    border:3px solid #66ccff;
+    width:70vw; height:70vh;
+}
+.wrap_btn button{
+    border: none;
+    text-decoration: none;
+    background-color: #663300;
+    color:white;
+    padding:8px 18px;
+    font-size: 1em;
+    margin:0 10px;
+    
+}
+

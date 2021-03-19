@@ -59,6 +59,9 @@ $(function(){
 
     })//end of ajax
 
+
+
+
     $('header')
 
     $(window).on('scroll',function(e){
@@ -80,10 +83,12 @@ $(function(){
         }
     })//end of scroll
 
+
+
     $('.intro a').on('click',function(){
         $('.ir_popup').addClass('active')
     })
-    $('.ir_popup').on('click',function(){
+    $('.close').on('click',function(){
         $('.ir_popup').removeClass('active')
     })
 
@@ -92,7 +97,7 @@ $(function(){
     setInterval(function(){ 
         $('.sr_bg').eq(fadeNum).fadeOut(1000); 
         fadeNum++;
-        if(fadeNum == 2){fadeNum=0}
+        if(fadeNum == 5){fadeNum=0}
         $('.sr_bg').eq(fadeNum).fadeIn(1000);
     },4000);//end of slide
 
@@ -101,54 +106,48 @@ $(function(){
     setInterval(function(){ 
         $('.sv_bg').eq(fadeNumm).fadeOut(1000); 
         fadeNumm++;
-        if(fadeNumm == 2){fadeNumm=0}
+        if(fadeNumm == 5){fadeNumm=0}
         $('.sv_bg').eq(fadeNumm).fadeIn(1000);
     },4000);//end of slide
 
+
+
     $('#au1room_thumb li a').on('click',function(){
         var th = $(this).children().attr('src');
-        
-        
         $('#au1room_img img').attr('src',th);
     })
     $('#au1room_thumb li').on('click',function(){
-        
         var order = $(this).index();
-        console.log(order)
         $('#au1roomNum').text('20'+(order+2)+' 호')
-        
     })
     $('#au2room_thumb li a').on('click',function(){
         var th = $(this).children().attr('src');
-        
-        
         $('#au2room_img img').attr('src',th);
     })
     $('#au2room_thumb li').on('click',function(){
-        
         var order = $(this).index();
-        console.log(order)
         $('#au2roomNum').text('20'+(order+2)+' 호')
-        
     })//end of attr img
+
+    
 
     $(window).on('scroll',function(e){
 
         var i = $(window).scrollTop();
         
-        if(i>550){
+        if(i > 500){
             $('#au2room_img').addClass('active');
         }
-        if(i>550){
+        if(i>500){
             $('#au2room_box').addClass('active');
         }
-        if(i>550){
+        if(i>500){
             $('#au2room_thumb').addClass('active');
         }
     })//end of scroll
 
-    $('span#nami').on('click',function(){
 
+    $('span#nami').on('click',function(){
         $('.nami').addClass('active');
     })
     $('.close').on('click',function(){
@@ -164,9 +163,11 @@ $(function(){
     })
     //end of about3 popup
 
+
     
     function c1(){
-        $('.c1_img').on('click',function(){
+        $('.c1_img').on('click',function(l){
+            console.log(l)
             var c1 = $(this).attr('src');
             $('.pg_popup').addClass('active');
             $('.pg_cont img').attr('src',c1);
@@ -178,6 +179,8 @@ $(function(){
         $('.pg_popup').removeClass('active');
     })
     //end of photogallery popup
+
+
 
     $('#mr_cta').on('click',function(){
         $('.df_popup').addClass('active')
@@ -199,5 +202,93 @@ $(function(){
     $('.close').on('click',function(){
         $('.df_popup').removeClass('active');
     })
+    //end of main review popup
+
+
+
+    $('.cta2').on('click',function(){
+        $('.sv_popup').addClass('active');
+    })
+    $('.close').on('click',function(){
+        $('.sv_popup').removeClass('active');
+    })//end of
+
+
+
+    var num = 0;
+    $('button').on('click',function(){
+        ($(this).index()==1) ? num++ : num--;
+        
+        if(num>2){
+            num=2;
+        }
+        if(num<-2){
+            num=-2;
+        }
+        $('.wrap div').css({
+            transform:'translateX('+ -num + '00%)'    
+        })
+
+    })//end of main slide
+
+    $('.aupcl_bot span').on('click',function(){
+        var th = $(this).children().attr('src');
+        $('.aupcl_top img').attr('src',th);
+    })//end of au1 popup img select
+
+    $('#au1room_img').on('click',function(e){
+        var au1img = $(this).find('img').attr('src');
+        console.log(au1img)
+        if(au1img == './imgs/aboutus1_room_1.jpg'){
+            $('.au_popup_1').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_2.jpg'){
+            $('.au_popup_2').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_3.jpg'){
+            $('.au_popup_1').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_4.jpg'){
+            $('.au_popup_2').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_5.jpg'){
+            $('.au_popup_1').addClass('active')
+        }
+
+        $('.close').on('click',function(){
+            $('.au_popup_1').removeClass('active');
+        })   
+        $('.close').on('click',function(){
+            $('.au_popup_2').removeClass('active');
+        })  
+    })
+
+    $('#au2room_img').on('click',function(e){
+        var au1img = $(this).find('img').attr('src');
+        console.log(au1img)
+        if(au1img == './imgs/aboutus1_room_1.jpg'){
+            $('.au_popup_1').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_2.jpg'){
+            $('.au_popup_2').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_3.jpg'){
+            $('.au_popup_1').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_4.jpg'){
+            $('.au_popup_2').addClass('active')
+        }
+        if(au1img == './imgs/aboutus1_room_5.jpg'){
+            $('.au_popup_1').addClass('active')
+        }
+
+        $('.close').on('click',function(){
+            $('.au_popup_1').removeClass('active');
+        })   
+        $('.close').on('click',function(){
+            $('.au_popup_2').removeClass('active');
+        })  
+    })
+
 
 });
