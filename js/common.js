@@ -246,13 +246,13 @@ $(function(){
             $('.au_popup_2').addClass('active')
         }
         if(au1img == './imgs/aboutus1_room_3.jpg'){
-            $('.au_popup_1').addClass('active')
+            $('.au_popup_3').addClass('active')
         }
         if(au1img == './imgs/aboutus1_room_4.jpg'){
-            $('.au_popup_2').addClass('active')
+            $('.au_popup_4').addClass('active')
         }
         if(au1img == './imgs/aboutus1_room_5.jpg'){
-            $('.au_popup_1').addClass('active')
+            $('.au_popup_5').addClass('active')
         }
 
         $('.close').on('click',function(){
@@ -261,6 +261,15 @@ $(function(){
         $('.close').on('click',function(){
             $('.au_popup_2').removeClass('active');
         })  
+        $('.close').on('click',function(){
+            $('.au_popup_3').removeClass('active');
+        })
+        $('.close').on('click',function(){
+            $('.au_popup_4').removeClass('active');
+        })
+        $('.close').on('click',function(){
+            $('.au_popup_5').removeClass('active');
+        })
     })
 
     $('#au2room_img').on('click',function(e){
@@ -273,13 +282,13 @@ $(function(){
             $('.au_popup_2').addClass('active')
         }
         if(au1img == './imgs/aboutus1_room_3.jpg'){
-            $('.au_popup_1').addClass('active')
+            $('.au_popup_3').addClass('active')
         }
         if(au1img == './imgs/aboutus1_room_4.jpg'){
-            $('.au_popup_2').addClass('active')
+            $('.au_popup_4').addClass('active')
         }
         if(au1img == './imgs/aboutus1_room_5.jpg'){
-            $('.au_popup_1').addClass('active')
+            $('.au_popup_5').addClass('active')
         }
 
         $('.close').on('click',function(){
@@ -288,7 +297,50 @@ $(function(){
         $('.close').on('click',function(){
             $('.au_popup_2').removeClass('active');
         })  
+        $('.close').on('click',function(){
+            $('.au_popup_3').removeClass('active');
+        })
+        $('.close').on('click',function(){
+            $('.au_popup_4').removeClass('active');
+        })
+        $('.close').on('click',function(){
+            $('.au_popup_5').removeClass('active');
+        })
+
+    })//end of 객실안내 popup
+
+
+    
+    
+    $('button.b_btn').each(function(){
+
+        var adult = $('select.adult');
+        var child = $('select.children');
+        var infant = $('select.infant');
+        var tDays = $('select.days');
+        var res = $('span.b_result');
+        
+        $('button.b_btn').on('click',function(e){
+        
+            var aTotal = parseInt(adult.val());
+            var cTotal = parseInt(child.val());
+            var iTotal = parseInt(infant.val());
+            var dTotal = parseInt(tDays.val());
+            var totalR = (aTotal + cTotal + iTotal)*dTotal ;
+            
+            res.text(totalR+' 원')
+            console.log(totalR)
+            $('.enter').on('click',function(){
+            if(totalR > 0){
+            alert('예약되었습니다')
+            }
+            })
     })
+        
+    })
+
+
+
 
 
 });

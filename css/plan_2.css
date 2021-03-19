@@ -447,6 +447,30 @@ header{
     color:black;
     font-weight: 600;
 }
+.bill{
+    display:inline-block;    
+    width:30%;
+}
+.bill select{
+    display:inline-block;
+    width:40%;
+    margin:10px 10px;
+    background-color: #66ccff;
+    border:none;
+    color:white;
+    padding:5px 10px;
+}
+.enter{
+    display:inline-block;
+    padding:20px 20px;
+    transform: translateY(-40%);
+    font-size: 1em;
+    border: none;
+    color:white;
+    background-color: #663300;
+}
+
+
 
 /* result */
 
@@ -458,7 +482,7 @@ header{
     flex-direction: column;
     position:absolute;
     left:37%;
-    top: 1000px;
+    top: 900px;
 }
 .plreserv .s1container div figure .result span{
     display: block;
