@@ -310,34 +310,31 @@ $(function(){
     })//end of 객실안내 popup
 
 
-    
-    
-    $('button.b_btn').each(function(){
+    var adult = $('.adult');
+    var child = $('.children');
+    var infant = $('.infant');
+    var tDays = $('.days');
+    var res = $('.b_result');
 
-        var adult = $('select.adult');
-        var child = $('select.children');
-        var infant = $('select.infant');
-        var tDays = $('select.days');
-        var res = $('span.b_result');
+    $('.b_btn').on('click',function(e){
+    
+        var aTotal = parseInt(adult.val());
+        var cTotal = parseInt(child.val());
+        var iTotal = parseInt(infant.val());
+        var dTotal = parseInt(tDays.val());
+        var totalR = (aTotal + cTotal + iTotal)*dTotal ;
         
-        $('button.b_btn').on('click',function(e){
+        res.text(totalR+' 원')
+        console.log(totalR)
+        $('.enter').on('click',function(){
+        if(totalR > 0){
+        alert('예약되었습니다')
+
+        }
+        })
+    })//end of 실시간 예약
         
-            var aTotal = parseInt(adult.val());
-            var cTotal = parseInt(child.val());
-            var iTotal = parseInt(infant.val());
-            var dTotal = parseInt(tDays.val());
-            var totalR = (aTotal + cTotal + iTotal)*dTotal ;
-            
-            res.text(totalR+' 원')
-            console.log(totalR)
-            $('.enter').on('click',function(){
-            if(totalR > 0){
-            alert('예약되었습니다')
-            }
-            })
-    })
-        
-    })
+
 
 
 
